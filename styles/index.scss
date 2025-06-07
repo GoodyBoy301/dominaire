@@ -7,9 +7,31 @@ $breakpoints: (
 ) !default;
 
 @import "../node_modules/include-media/dist/include-media";
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+@import url("https://fonts.cdnfonts.com/css/humane");
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/fonts/Nohemi-ExtraBold.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Nohemi-ExtraBold.otf") format("opentype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/fonts/Nohemi-Regular.woff2") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Nohemi-Regular.otf") format("opentype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
 
 html {
   font-size: calc(100vw / 1440 * 10);
+  background: var(--Black, #000);
+
   @include media("<phone") {
     font-size: calc(100vw / 430 * 10);
   }
