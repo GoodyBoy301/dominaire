@@ -68,6 +68,21 @@ body {
   }
 }
 
+svg {
+  margin: unset;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @import "./components/header.scss";
 @import "./components/hero.scss";
+@import "./components/about.scss";
+@import "./components/stack.scss";
 @import "./components/footer.scss";
