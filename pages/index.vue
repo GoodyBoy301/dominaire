@@ -1,5 +1,5 @@
 <template>
-  <main class="page" id="home">
+  <main class="page preloading" id="home">
     <Hero />
     <About />
     <Stack />
