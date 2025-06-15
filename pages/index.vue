@@ -3,5 +3,6 @@
     <Hero />
     <About />
     <Stack />
+    <Works />
   </main>
 </template>

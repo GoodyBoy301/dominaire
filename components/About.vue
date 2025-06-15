@@ -164,8 +164,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: ".about",
         scrub: true,
-        start: "0% 0%",
-        end: "0% -100%",
+        start: "0% -25%",
+        end: "0% -125%",
       },
     })
     .fromTo(".about-us hr", { scaleX: 0 }, { scaleX: 1, duration: 1 }, 0)
