@@ -32,12 +32,12 @@
     </h2>
     <ul class="works-works">
       <li
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
+        @mouseenter="(e) => onMouseEnter(e, 0)"
+        @mouseleave="(e) => onMouseLeave(e, 0)"
         :style="{
           backgroundColor: '#E6E6E6',
-          '--color': '#000',
-          '--theme': '#D13B00',
+          '--color': '#000000',
+          '--bg': '#76EB5F',
         }"
       >
         <div>
@@ -45,25 +45,27 @@
             <img src="/images/works-001.webp" alt="" />
             <div></div>
           </figure>
-          <!-- <h3>
-            web design
-            <i>UX Research</i>
-            <i>UI Design</i>
-          </h3> -->
           <h4>Pulse poetry</h4>
+          <h5>Pulse poetry</h5>
           <p>
-            We create modern and visually stunning websites that perfectly suit
-            your needs.
+            Pulse Poetry is your sanctuary for all things poetic, where every
+            word finds a place and every voice is celebrated.
           </p>
+          <i> website design </i>
+          <h6>2024</h6>
+          <NuxtLink href="/" target="_blank">
+            view project
+            <SvgoArrowDownRight />
+          </NuxtLink>
         </div>
       </li>
       <li
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
+        @mouseenter="(e) => onMouseEnter(e, 1)"
+        @mouseleave="(e) => onMouseLeave(e, 1)"
         :style="{
           backgroundColor: '#000',
-          '--color': '#F5F1EE',
-          '--theme': '#7D53BE',
+          '--color': '#FFFFFF',
+          '--bg': '#D13B00',
         }"
       >
         <div>
@@ -71,26 +73,28 @@
             <img src="/images/works-002.webp" alt="" />
             <div></div>
           </figure>
-          <!-- <h3>
-            WEB DEVELOPMENT
-            <i>Corporate site</i>
-            <i>Blogs</i>
-            <i>E-commerce</i>
-          </h3> -->
           <h4>Kilmanjaro aroma</h4>
+          <h5>Kilmanjaro aroma</h5>
           <p>
-            We build websites tailored to your business, ensuring they are fast,
-            secure, and easy to use.
+            Grown in the heart of Tanzania, our premium coffee beans deliver a
+            bold, luxurious taste that awakens your senses and connects you to
+            the land where coffee thrives.
           </p>
+          <i> website design </i>
+          <h6>2025</h6>
+          <NuxtLink href="/" target="_blank">
+            view project
+            <SvgoArrowDownRight />
+          </NuxtLink>
         </div>
       </li>
       <li
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
+        @mouseenter="(e) => onMouseEnter(e, 2)"
+        @mouseleave="(e) => onMouseLeave(e, 2)"
         :style="{
           backgroundColor: '#E7204F',
-          '--color': '#F5F1EE',
-          '--theme': '#08627C',
+          '--color': '#FFFFFF',
+          '--bg': '#D13B00',
         }"
       >
         <div>
@@ -98,25 +102,29 @@
             <img src="/images/works-003.webp" alt="" />
             <div></div>
           </figure>
-          <!-- <h3>
-            Marketing
-            <i>SEO</i>
-            <i>SOCIAL MEDIA ADS</i>
-          </h3> -->
           <h4>Covapay</h4>
+          <h5>Covapay</h5>
           <p>
-            We help your website rank higher in search engine results, improving
-            visibility and driving more traffic.
+            The goal of Covapay is to bridge the gap between traditional payment
+            methods and modern digital solutions, making it easier for small
+            businesses to adapt to changing consumer preferences and
+            technological advancements.
           </p>
+          <i> website design </i>
+          <h6>2023</h6>
+          <NuxtLink href="/" target="_blank">
+            view project
+            <SvgoArrowDownRight />
+          </NuxtLink>
         </div>
       </li>
       <li
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
+        @mouseenter="(e) => onMouseEnter(e, 3)"
+        @mouseleave="(e) => onMouseLeave(e, 3)"
         :style="{
           backgroundColor: '#E7FDE7',
           '--color': '#000000',
-          '--theme': '#FCFF00',
+          '--bg': '#E6E6E6',
         }"
       >
         <div>
@@ -124,16 +132,19 @@
             <img src="/images/works-004.webp" alt="" />
             <div></div>
           </figure>
-          <!-- <h3>
-            branding
-            <i>Logos</i>
-            <i>illustrations</i>
-          </h3> -->
           <h4>Yesibid</h4>
+          <h5>Yesibid</h5>
           <p>
-            We create a unique identity for your brand, helping to set you apart
-            from the competition.
+            YesIBid is a next-generation vehicle auction platform designed for
+            transparency, speed, and intelligent bidding starting in Africa,
           </p>
+          <i> webapp </i>
+          <i> branding </i>
+          <h6>2025</h6>
+          <NuxtLink href="/" target="_blank">
+            view project
+            <SvgoArrowDownRight />
+          </NuxtLink>
         </div>
       </li>
     </ul>
@@ -145,39 +156,71 @@ import { rem } from "~/utils/dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/src/all";
+// import SvgoArrowRightDown from "~/assets/icons/a"
 
-function onMouseEnter(e: MouseEvent) {
-  const target = e.target as HTMLElement;
+const tls: gsap.core.Timeline[] = [];
 
-  gsap
-    .timeline()
-    .set(target.querySelector("h4"), { opacity: 1 })
-    .to(target.querySelectorAll("h4 .char"), {
-      yPercent: -100,
-      stagger: 0.01,
-    });
+function onMouseEnter(e: MouseEvent, i: number) {
+  tls[i]?.play();
 }
 
-function onMouseLeave(e: MouseEvent) {
-  const target = e.target as HTMLElement;
-
-  gsap
-    .timeline()
-    .to(target.querySelectorAll("h4 .char"), {
-      yPercent: 0,
-      stagger: -0.01,
-    })
-    .set(target.querySelector("h4"), { opacity: 1 });
+function onMouseLeave(e: MouseEvent, i: number) {
+  tls[i]?.reverse();
 }
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  new SplitText(".works-works h4", {
+  new SplitText(".works-works h4,.works-works h5", {
     type: "lines,chars",
     autoSplit: true,
     charsClass: "char",
     linesClass: "line",
+  });
+
+  new SplitText(".works-works p", {
+    type: "lines",
+    autoSplit: true,
+    linesClass: "line",
+  });
+
+  const projects = document.querySelectorAll(".works-works li");
+  projects.forEach((project) => {
+    tls.push(
+      gsap
+        .timeline({ paused: true })
+        .set(project.querySelector("h4"), { opacity: 1 }, 0)
+        .to(
+          project.querySelectorAll("h4 .char"),
+          {
+            yPercent: -100,
+            stagger: 0.01,
+          },
+          0
+        )
+        .set(project.querySelector("p"), { opacity: 1 }, 0)
+        .to(
+          project.querySelectorAll("p .line"),
+          {
+            clipPath: "inset(0% 0% 0% 0%)",
+            yPercent: -100,
+            stagger: 0.01,
+          },
+          0
+        )
+        .to(
+          project.querySelectorAll("h5 .char"),
+          {
+            yPercent: 100,
+          },
+          0
+        )
+        .to(
+          project.querySelector("h5"),
+          { opacity: 0, filter: "blur(2rem)" },
+          0
+        )
+    );
   });
 
   gsap
