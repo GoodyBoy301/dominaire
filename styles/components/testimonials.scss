@@ -1,0 +1,140 @@
+.testimonials {
+  height: calc(100vh + 55.2rem - 5.52rem);
+  margin-bottom: 100vh;
+  &-heading {
+    width: 100vw;
+    background: var(--brand-main, #17181b);
+    display: flex;
+    padding-top: 7rem;
+    height: 47rem;
+    align-items: center;
+
+    div {
+      text-align: center;
+      font-family: Humane;
+      font-size: 30rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25rem;
+      text-transform: uppercase;
+      display: flex;
+      animation: marquee 10s linear infinite;
+      cursor: default;
+    }
+
+    span {
+      width: calc(67rem + 4.65rem);
+      color: #e7fde788;
+      position: relative;
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: #e7fde7;
+        i {
+          transform: translate(-50%, -50%) rotate(-4.94deg) scale(1);
+          opacity: 1;
+        }
+      }
+    }
+
+    i {
+      position: absolute;
+      display: flex;
+      padding: 1.2rem 1rem 0.8rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #d13b00;
+      color: #fff;
+      font-family: Nohemi;
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      top: 42.5%;
+      left: 50%;
+      transform: translate(-50%, 100%) rotate(-4.94deg) scale(0);
+      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+      opacity: 0;
+      white-space: pre;
+    }
+  }
+
+  &-testimonials {
+    padding: 7.2rem;
+    background: #f5f1ee;
+    display: flex;
+    gap: 6.7rem;
+    position: relative;
+    padding-top: 41.1rem;
+
+    h3 {
+      color: var(--Shade-Black, #000);
+      font-family: Humane;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18rem; /* 90% */
+      text-transform: uppercase;
+      position: absolute;
+      top: 8rem;
+      left: 8rem;
+    }
+
+    li {
+      width: 57rem;
+      flex-shrink: 0;
+      opacity: 0.4;
+      border-bottom: 0.1rem solid #000;
+      padding-bottom: 2.7rem;
+      transition: opacity 0.35s ease-in-out;
+      cursor: default;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      color: #000;
+      font-family: Humane;
+      font-size: 10rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 10rem; /* 100% */
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      margin-top: 1.8rem;
+    }
+
+    h5 {
+      margin-top: 1.8rem;
+      color: #000;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+    }
+
+    h6 {
+      margin-top: 0.4rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Nohemi;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+    }
+  }
+}

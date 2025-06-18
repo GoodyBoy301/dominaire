@@ -4,5 +4,6 @@
     <About />
     <Stack />
     <Works />
+    <Testimonials />
   </main>
 </template>
