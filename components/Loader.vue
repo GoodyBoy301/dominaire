@@ -34,6 +34,8 @@ import gsap from "gsap";
 const counter = ref(0);
 const length = ref(1);
 
+const props = defineProps<{ onLoaded: () => void }>();
+
 onMounted(() => {
   const tl = gsap
     .timeline({ paused: true, defaults: { ease: "none" } })
@@ -128,8 +130,9 @@ onMounted(() => {
         .set(".header-menu", { autoAlpha: 1 })
         .set(".loader", { autoAlpha: 0 })
         .call(() => {
-          window.lenis.scrollTo(0, { immediate: true });
           document.querySelector(".app")!.classList.remove("preloading");
+          props.onLoaded();
+          window.lenis.scrollTo(0, { immediate: true });
         });
       return;
     }

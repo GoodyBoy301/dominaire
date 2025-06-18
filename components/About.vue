@@ -21,7 +21,7 @@
         "
       >
         <source
-          src="https://res.cloudinary.com/dllm7gfit/video/upload/v1749895741/locomotive___digital-first_design_agency___reel_2020_1080p_sr4kv1.mp4?t=6.01"
+          src="https://res.cloudinary.com/dllm7gfit/video/upload/v1750263487/Comp_5_lhaojm.mp4?t=6.01"
           type="video/mp4"
         />
       </video>
@@ -155,7 +155,6 @@ onMounted(() => {
 
   new SplitText(".about-us p", {
     type: "words,chars",
-    autoSplit: true,
     charsClass: "char",
   });
 

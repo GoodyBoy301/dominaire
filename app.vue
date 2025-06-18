@@ -1,9 +1,9 @@
 <template>
   <div class="app preloading">
     <Header></Header>
-    <NuxtPage></NuxtPage>
+    <Loader v-if="isLoading" :onLoaded="onLoaded" />
+    <NuxtPage v-else></NuxtPage>
     <Footer></Footer>
-    <Loader />
   </div>
 </template>
 
@@ -14,6 +14,11 @@ import "./styles/index.scss";
 
 const projName = ref("New website");
 const projDesc = ref("Bootstrapped with the Nuxt3 GoodyPlate");
+
+const isLoading = ref(true);
+function onLoaded() {
+  isLoading.value = false;
+}
 
 const computedPageMeta = computed(() => {
   return {

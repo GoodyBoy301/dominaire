@@ -32,7 +32,7 @@
       &:hover {
         color: #e7fde7;
         i {
-          transform: translate(-50%, -50%) rotate(-5.629deg) scale(1);
+          transform: translate(-50%, -50%) rotate(-4.94deg) scale(1);
           opacity: 1;
         }
       }
@@ -55,8 +55,8 @@
       text-transform: uppercase;
       top: 42.5%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(-4.94deg) scale(0);
-      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+      transform: translate(-50%, 100%) rotate(-4.94deg) scale(0);
+      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
       opacity: 0;
       white-space: pre;
     }

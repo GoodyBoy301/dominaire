@@ -156,6 +156,54 @@ onMounted(() => {
       { yPercent: -90 * 4, duration: 2 },
       0.125
     )
+    .fromTo(
+      ".stack-stack li:nth-of-type(1) p",
+      { yPercent: 100 * 1, opacity: 0 },
+      { yPercent: 0, opacity: 1, duration: 0.5 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(1) h3",
+      { yPercent: 50 * 1 },
+      { yPercent: 0, duration: 0.5 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(2) p",
+      { yPercent: 100 * 2, opacity: 0 },
+      { yPercent: 0 * 2, opacity: 1, duration: 1 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(2) h3",
+      { yPercent: 50 * 2 },
+      { yPercent: 0 * 2, duration: 1 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(3) p",
+      { yPercent: 100 * 3, opacity: 0 },
+      { yPercent: 0 * 3, opacity: 1, duration: 1.5 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(3) h3",
+      { yPercent: 50 * 3 },
+      { yPercent: 0 * 3, duration: 1.5 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(4) p",
+      { yPercent: 100 * 4, opacity: 0 },
+      { yPercent: 0 * 4, opacity: 1, duration: 2 },
+      0.125
+    )
+    .fromTo(
+      ".stack-stack li:nth-of-type(4) h3",
+      { yPercent: 50 * 4 },
+      { yPercent: 0 * 4, duration: 2 },
+      0.125
+    )
     .to(".stack-stack li:nth-of-type(4)", { x: 0, duration: 0.1 });
 });
 </script>
