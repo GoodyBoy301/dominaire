@@ -125,76 +125,11 @@
 </template>
 
 <script setup lang="ts">
-import { rem } from "~/utils/dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { SplitText } from "gsap/src/all";
-// import SvgoArrowRightDown from "~/assets/icons/a"
-
-const tls: gsap.core.Timeline[] = [];
-
-function onMouseEnter(e: MouseEvent, i: number) {
-  tls[i]?.play();
-}
-
-function onMouseLeave(e: MouseEvent, i: number) {
-  tls[i]?.reverse();
-}
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
-
-  new SplitText(".testimonials-testimonials h4,.testimonials-testimonials h5", {
-    type: "lines,chars",
-    autoSplit: true,
-    charsClass: "char",
-    linesClass: "line",
-  });
-
-  new SplitText(".testimonials-testimonials p", {
-    type: "lines",
-    autoSplit: true,
-    linesClass: "line",
-  });
-
-  const projects = document.querySelectorAll(".testimonials-testimonials li");
-  projects.forEach((project) => {
-    tls.push(
-      gsap
-        .timeline({ paused: true })
-        .set(project.querySelector("h4"), { opacity: 1 }, 0)
-        .to(
-          project.querySelectorAll("h4 .char"),
-          {
-            yPercent: -100,
-            stagger: 0.01,
-          },
-          0
-        )
-        .set(project.querySelector("p"), { opacity: 1 }, 0)
-        .to(
-          project.querySelectorAll("p .line"),
-          {
-            clipPath: "inset(0% 0% 0% 0%)",
-            yPercent: -100,
-            stagger: 0.01,
-          },
-          0
-        )
-        .to(
-          project.querySelectorAll("h5 .char"),
-          {
-            yPercent: 100,
-          },
-          0
-        )
-        .to(
-          project.querySelector("h5"),
-          { opacity: 0, filter: "blur(2rem)" },
-          0
-        )
-    );
-  });
 
   gsap
     .timeline({

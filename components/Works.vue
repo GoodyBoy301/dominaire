@@ -152,11 +152,9 @@
 </template>
 
 <script setup lang="ts">
-import { rem } from "~/utils/dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/src/all";
-// import SvgoArrowRightDown from "~/assets/icons/a"
 
 const tls: gsap.core.Timeline[] = [];
 

@@ -1,6 +1,5 @@
 .testimonials {
-  height: calc(100vh + 55.2rem - 5.52rem);
-  margin-bottom: 100vh;
+  height: calc(100vh);
   &-heading {
     width: 100vw;
     background: var(--brand-main, #17181b);
@@ -27,6 +26,7 @@
       color: #e7fde788;
       position: relative;
       transition: color 0.5s ease-in-out;
+      margin-bottom: 2rem;
 
       &:hover {
         color: #e7fde7;

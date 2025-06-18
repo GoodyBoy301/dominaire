@@ -1,2 +1,123 @@
 .footer {
+  background: var(--Primary-Red, #e7204f);
+  height: 100vh;
+  position: relative;
+  z-index: 200;
+  &-heading {
+    width: 100vw;
+    display: flex;
+    padding-top: 4.5rem;
+    height: 71rem;
+    align-items: center;
+
+    div {
+      text-align: center;
+      font-family: Humane;
+      font-size: 30rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25rem;
+      text-transform: uppercase;
+      display: flex;
+      animation: marquee 10s linear infinite;
+      cursor: default;
+      height: 100%;
+    }
+
+    span {
+      width: 98.8rem;
+      color: #ffffff;
+      position: relative;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0.2;
+      position: relative;
+      text-align: left;
+
+      &:hover {
+        opacity: 1;
+        i {
+        }
+      }
+    }
+
+    i {
+      color: #e7fde7;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: Nohemi;
+      font-size: 5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 5rem;
+      text-transform: uppercase;
+      display: flex;
+      padding: 1.4rem 1rem 0.4rem;
+      height: 5.6rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #000;
+      width: fit-content;
+      position: absolute;
+      bottom: 4.5rem;
+      left: 0;
+    }
+
+    a {
+      color: #fff;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: Nohemi;
+      font-size: 2.24rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.5rem;
+      text-transform: uppercase;
+      display: flex;
+      padding: 1.4rem 1rem 0.4rem;
+      height: 5.6rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: fit-content;
+      position: absolute;
+      bottom: 4.5rem;
+      right: 14rem;
+    }
+  }
+
+  &-footer {
+    position: absolute;
+    width: 46.7rem;
+    height: 100vh;
+    flex-shrink: 0;
+    background: #000;
+    top: 0;
+    left: 0;
+    padding: 4.7rem 6rem;
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+
+      color: var(--bg-color, #f5f1ee);
+      font-family: Nohemi;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.8rem;
+      text-transform: uppercase;
+      a {
+        display: block;
+        transform: translateX(0);
+        transition: transform 0.5s ease-in-out;
+      }
+      p:hover {
+        a {
+          transform: translateX(2.4rem);
+        }
+      }
+    }
+  }
 }

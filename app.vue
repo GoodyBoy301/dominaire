@@ -3,7 +3,7 @@
     <Header></Header>
     <Loader v-if="isLoading" :onLoaded="onLoaded" />
     <NuxtPage v-else></NuxtPage>
-    <Footer></Footer>
+    <Footer v-if="!isLoading"></Footer>
   </div>
 </template>
 
