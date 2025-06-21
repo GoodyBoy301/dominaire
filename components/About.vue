@@ -1,6 +1,5 @@
 <template>
   <section class="about" id="about" @mouseleave="onMouseUp">
-    <img src="/images/hero-shadow.webp" alt="" v-for="i in 100" />
     <figure class="about-media">
       <video
         playsinline

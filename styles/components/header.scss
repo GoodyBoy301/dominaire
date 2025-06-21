@@ -7,6 +7,9 @@
   left: 0;
   right: 0;
   z-index: 100;
+  @include media("<phone") {
+    padding: 2rem 2.4rem;
+  }
 
   &-logo {
     color: var(--Shade-White, #fff);
@@ -16,6 +19,9 @@
     font-weight: 700;
     line-height: 3.2rem;
     text-transform: uppercase;
+    @include media("<phone") {
+      font-size: 1.6rem;
+    }
   }
 
   &-hamburger {
@@ -36,10 +42,20 @@
     padding-top: 1rem;
     overflow: hidden;
     z-index: 10;
+    @include media("<phone") {
+      font-size: 1.6rem;
+      right: 1.6rem;
+      width: 6.4rem;
+      height: 3.2rem;
+    }
 
     span:nth-of-type(1) {
       transform-origin: 50% 100%;
       margin-top: 0.5rem;
+      @include media("<phone") {
+        margin-top: 0rem;
+        /* padding: 2rem 2.4rem; */
+      }
     }
 
     span:nth-of-type(2) {
@@ -47,10 +63,17 @@
       font-size: 2.4rem;
       font-weight: 400;
       margin-top: 2rem;
+      @include media("<phone") {
+        font-size: 1.6rem;
+        margin-top: 2.6rem;
+      }
     }
 
     i {
       display: inline-block;
+      @include media("<phone") {
+        /* padding: 2rem 2.4rem; */
+      }
     }
   }
 
@@ -64,8 +87,6 @@
     flex-direction: column;
     visibility: hidden;
     opacity: 0;
-    transform-origin: 93.5% 2.75%;
-
     a {
       display: inline-flex;
       padding: 3vh 3.8rem 1vh 7.5rem;
@@ -85,10 +106,21 @@
       transition: height 0.2s ease-in-out;
       cursor: pointer;
       position: relative;
+      @include media("<phone") {
+        font-size: 10vh;
+        padding: 0vh 3rem 2vh;
+      }
       &:hover {
         height: 50vh;
+        @include media("<phone") {
+          height: 20vh;
+        }
         span {
           transform: scale(1.75) translateY(-20%);
+          @include media("<phone") {
+            transform: scale(1.5);
+            /* padding: 2rem 2.4rem; */
+          }
         }
       }
     }
@@ -100,6 +132,9 @@
       right: 0;
       bottom: 0;
       background: #e7204f;
+      @include media("<phone") {
+        /* padding: 2rem 2.4rem; */
+      }
     }
 
     span {
@@ -107,6 +142,9 @@
       transform: scale(1.75);
       transition: transform 0.2s ease-in-out;
       position: relative;
+      @include media("<phone") {
+        transform: scale(1.5);
+      }
     }
   }
 }
