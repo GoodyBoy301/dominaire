@@ -9,14 +9,14 @@
             hello@dominaireagency.com
           </NuxtLink>
         </span>
-        <span>
+        <span data-desktop>
           Ready to elevate your business?
           <i>Contact us</i>
           <NuxtLink href="/" target="_blank">
             hello@dominaireagency.com
           </NuxtLink>
         </span>
-        <span>
+        <span data-desktop>
           Ready to elevate your business?
           <i>Contact us</i>
           <NuxtLink href="/" target="_blank">
@@ -24,7 +24,7 @@
           </NuxtLink>
         </span>
       </div>
-      <div>
+      <div data-desktop>
         <span>
           Ready to elevate your business?
           <i>Contact us</i>
@@ -220,6 +220,8 @@ onMounted(() => {
     }
   });
   gsap.registerPlugin(ScrollTrigger);
+
+  if (innerWidth < 768) return;
 
   gsap
     .timeline({

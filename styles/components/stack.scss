@@ -8,6 +8,10 @@
     padding-top: 7rem;
     height: 55.2rem;
     align-items: center;
+    @include media("<phone") {
+      height: 44rem;
+      padding-top: 0;
+    }
 
     div {
       text-align: center;
@@ -20,6 +24,11 @@
       display: flex;
       animation: marquee 10s linear infinite;
       cursor: default;
+      @include media("<phone") {
+        font-size: 15rem;
+        font-weight: 500;
+        line-height: 12rem;
+      }
     }
 
     span {
@@ -27,11 +36,15 @@
       color: #e7fde788;
       position: relative;
       transition: color 0.35s ease-in-out;
+      @include media("<phone") {
+        width: 29.4rem;
+        padding-inline: 1rem;
+      }
 
       &:hover {
         color: #e7fde7;
         i {
-          transform: translate(-50%, -50%) rotate(-5.629deg) scale(1);
+          transform: translate(-50%, -50%) rotate(-5.629deg);
           opacity: 1;
         }
       }
@@ -54,9 +67,15 @@
       text-transform: uppercase;
       top: 35%;
       left: 50%;
-      transform: translate(-50%, 100%) rotate(-5.629deg) scale(0);
+      transform: translate(-50%, 100%) rotate(-5.629deg);
       transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
       opacity: 0;
+      @include media("<phone") {
+        transform: translate(-50%, 100%) rotate(-8.92deg);
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        top: 45%;
+      }
     }
   }
 
@@ -67,72 +86,145 @@
       flex-direction: column;
       align-items: center;
       height: 55.2rem;
+      @include media("<phone") {
+        padding: 3.2rem;
+        height: 60rem;
+        position: relative;
+        justify-content: center;
+      }
+
       &:hover {
         i {
-          transform: scale(1) translate(0%, 0%);
+          transform: translate(0%, 0%);
           opacity: 1;
         }
       }
       &:nth-of-type(1) {
+        @include media("<phone") {
+          top: 0rem;
+        }
         div {
           width: 58.4rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         p {
           width: 47.7rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         i:nth-of-type(1) {
           left: -17.7rem;
           top: 6.7rem;
+          @include media("<phone") {
+            top: 10.78rem + 11rem;
+            left: 16.9rem;
+          }
         }
         i:nth-of-type(2) {
           left: 51rem;
           top: 19.3rem;
+          @include media("<phone") {
+            left: 0.9rem;
+            top: -5.2rem - 3.62rem;
+          }
         }
       }
       &:nth-of-type(2) {
+        @include media("<phone") {
+          top: 4rem;
+        }
         div {
           width: 89.9rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         p {
           width: 52.5rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         i:nth-of-type(1) {
           left: -13.2rem;
           top: 3.2rem;
+          @include media("<phone") {
+            left: -6.2rem;
+            top: -5.2rem - 3.02rem;
+          }
         }
         i:nth-of-type(2) {
           left: 79rem;
           top: 8.9rem;
+          @include media("<phone") {
+            top: 9.78rem + 11rem;
+            left: 25rem;
+          }
         }
         i:nth-of-type(3) {
           left: 55rem;
           top: 26.5rem;
+          @include media("<phone") {
+            top: 17.08rem + 11rem;
+            left: 4.2rem;
+          }
         }
       }
       &:nth-of-type(3) {
+        @include media("<phone") {
+          top: 8rem;
+        }
         div {
           width: 55rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         i:nth-of-type(1) {
           left: -6.35rem;
           top: 0.7rem;
+          @include media("<phone") {
+            left: -0.3rem;
+            top: -5.2rem - 3.32rem;
+          }
         }
         i:nth-of-type(2) {
           left: 43.6rem;
           top: 13.7rem;
+          @include media("<phone") {
+            top: 13rem + 11rem;
+            left: 7.5rem;
+          }
         }
       }
       &:nth-of-type(4) {
+        @include media("<phone") {
+          top: 12rem;
+        }
         div {
           width: 48.6rem;
+          @include media("<phone") {
+            width: unset;
+          }
         }
         i:nth-of-type(1) {
           top: 0.7rem;
           left: -10.9rem;
+          @include media("<phone") {
+            left: -1.6rem;
+            top: -5.2rem - 1.42rem;
+          }
         }
         i:nth-of-type(2) {
           left: 43.6rem;
           top: 13.7rem;
+          @include media("<phone") {
+            top: 13rem + 11rem;
+            left: 15.1rem;
+          }
         }
       }
     }
@@ -146,6 +238,10 @@
       line-height: 25rem;
       text-transform: uppercase;
       position: relative;
+      @include media("<phone") {
+        font-size: 15rem;
+        line-height: 12rem;
+      }
 
       i {
         color: color-mix(in srgb, var(--color) 90%, transparent 10%);
@@ -163,9 +259,17 @@
         align-items: center;
         white-space: pre;
         opacity: 0;
-        transform: scale(0.5) translate(0%, 500%);
+        transform: translate(0%, 500%);
         transition: opacity 0.425s ease-in-out, transform 0.425s ease-in-out;
         transform-origin: 50% 100%;
+        @include media("<phone") {
+          transition-delay: unset !important;
+          opacity: 1;
+          transform: translate(0%, 0%);
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          height: 5.2rem;
+        }
         &:nth-of-type(2) {
           transition-delay: 0.05s;
         }
@@ -186,6 +290,10 @@
       display: inline-block;
       min-width: 0;
       margin-right: auto;
+      @include media("<phone") {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+      }
     }
   }
 }

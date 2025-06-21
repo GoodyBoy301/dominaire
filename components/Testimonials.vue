@@ -4,29 +4,29 @@
       <div>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
       </div>
       <div>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
         <span>
           Testimonials
-          <i>stellar testimonials</i>
+          <i>word of mouth</i>
         </span>
       </div>
     </h2>
@@ -157,7 +157,7 @@ onMounted(() => {
     .fromTo(
       ".testimonials-testimonials li",
       { x: 0 },
-      { x: "-260vw", duration: 2 }
+      { x: innerWidth < 768 ? "-300vw" : "-260vw", duration: 2 }
     )
     .to(".testimonials-testimonials", { x: 0, duration: 0.1 });
 });

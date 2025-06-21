@@ -58,8 +58,14 @@
         }"
       >
         <div>
-          <h3>
+          <h3 data-desktop>
             WEB DEVELOPMENT
+            <i>Corporate site</i>
+            <i>Blogs</i>
+            <i>E-commerce</i>
+          </h3>
+          <h3 data-mobile>
+            WEB DEV.
             <i>Corporate site</i>
             <i>Blogs</i>
             <i>E-commerce</i>
@@ -176,8 +182,8 @@ onMounted(() => {
     )
     .fromTo(
       ".stack-stack li:nth-of-type(2) h3",
-      { yPercent: 50 * 2 },
-      { yPercent: 0 * 2, duration: 1 },
+      { yPercent: 50 * 2, opacity: 0 },
+      { yPercent: 0 * 2, duration: 1, opacity: 1 },
       0.125
     )
     .fromTo(
@@ -188,8 +194,8 @@ onMounted(() => {
     )
     .fromTo(
       ".stack-stack li:nth-of-type(3) h3",
-      { yPercent: 50 * 3 },
-      { yPercent: 0 * 3, duration: 1.5 },
+      { yPercent: 50 * 3, opacity: 0 },
+      { yPercent: 0 * 3, duration: 1.5, opacity: 1 },
       0.125
     )
     .fromTo(
@@ -200,8 +206,8 @@ onMounted(() => {
     )
     .fromTo(
       ".stack-stack li:nth-of-type(4) h3",
-      { yPercent: 50 * 4 },
-      { yPercent: 0 * 4, duration: 2 },
+      { yPercent: 50 * 4, opacity: 0 },
+      { yPercent: 0 * 4, duration: 2, opacity: 1 },
       0.125
     )
     .to(".stack-stack li:nth-of-type(4)", { x: 0, duration: 0.1 });

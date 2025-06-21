@@ -7,6 +7,10 @@
     padding-top: 7rem;
     height: 47rem;
     align-items: center;
+    @include media("<phone") {
+      height: 32rem;
+      padding-top: 0;
+    }
 
     div {
       text-align: center;
@@ -19,6 +23,11 @@
       display: flex;
       animation: marquee 10s linear infinite;
       cursor: default;
+      @include media("<phone") {
+        font-size: 15rem;
+        font-weight: 500;
+        line-height: 12rem;
+      }
     }
 
     span {
@@ -27,11 +36,15 @@
       position: relative;
       transition: color 0.5s ease-in-out;
       margin-bottom: 2rem;
+      @include media("<phone") {
+        width: 38rem;
+        padding-inline: 1rem;
+      }
 
       &:hover {
         color: #e7fde7;
         i {
-          transform: translate(-50%, -50%) rotate(-4.94deg) scale(1);
+          transform: translate(-50%, -50%) rotate(-4.94deg);
           opacity: 1;
         }
       }
@@ -54,7 +67,7 @@
       text-transform: uppercase;
       top: 42.5%;
       left: 50%;
-      transform: translate(-50%, 100%) rotate(-4.94deg) scale(0);
+      transform: translate(-50%, 100%) rotate(-4.94deg);
       transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
       opacity: 0;
       white-space: pre;
@@ -68,6 +81,12 @@
     gap: 6.7rem;
     position: relative;
     padding-top: 41.1rem;
+    @include media("<phone") {
+      gap: 4.8rem;
+      padding: 2.4rem;
+      padding-top: 45rem;
+      height: calc(100vh + 18rem);
+    }
 
     h3 {
       color: var(--Shade-Black, #000);
@@ -80,6 +99,13 @@
       position: absolute;
       top: 8rem;
       left: 8rem;
+      @include media("<phone") {
+        font-size: 15rem;
+        top: 16rem;
+        left: 2.4rem;
+        right: 2.4rem;
+        line-height: 82.5%;
+      }
     }
 
     li {
@@ -90,6 +116,11 @@
       padding-bottom: 2.7rem;
       transition: opacity 0.35s ease-in-out;
       cursor: default;
+      @include media("<phone") {
+        opacity: 1;
+        width: 34.6rem;
+        height: fit-content;
+      }
       &:hover {
         opacity: 1;
       }
@@ -114,6 +145,10 @@
       line-height: 3.2rem;
       text-transform: uppercase;
       margin-top: 1.8rem;
+      @include media("<phone") {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
     }
 
     h5 {

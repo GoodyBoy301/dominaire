@@ -159,10 +159,12 @@ import { SplitText } from "gsap/src/all";
 const tls: gsap.core.Timeline[] = [];
 
 function onMouseEnter(e: MouseEvent, i: number) {
+  if (innerWidth < 768) return;
   tls[i]?.play();
 }
 
 function onMouseLeave(e: MouseEvent, i: number) {
+  if (innerWidth < 768) return;
   tls[i]?.reverse();
 }
 
