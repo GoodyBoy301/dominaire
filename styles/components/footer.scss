@@ -19,7 +19,7 @@
       line-height: 25rem;
       text-transform: uppercase;
       display: flex;
-      animation: marquee 10s linear infinite;
+      animation: marquee 30s linear infinite;
       cursor: default;
       height: 100%;
     }
@@ -94,13 +94,14 @@
     background: #000;
     top: 0;
     left: 0;
-    padding: 4.7rem 6rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3.1rem 3.6rem;
 
     &-links {
       display: flex;
       flex-direction: column;
-      gap: 2.8rem;
-
+      gap: 1.2rem;
       color: var(--bg-color, #f5f1ee);
       font-family: Nohemi;
       font-size: 2rem;
@@ -109,15 +110,79 @@
       line-height: 2.8rem;
       text-transform: uppercase;
       a {
-        display: block;
-        transform: translateX(0);
-        transition: transform 0.5s ease-in-out;
+        padding: 1rem 2.4rem 0.6rem;
+        width: fit-content;
       }
-      p:hover {
-        a {
-          transform: translateX(2.4rem);
+      p {
+        display: block;
+        transform: translate(calc(var(--x) * 25%), calc(var(--y) * 25%));
+        pointer-events: none;
+        transition: transform 0.05s ease-out;
+      }
+    }
+
+    &-form {
+      padding: 5rem 2.4rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      input {
+        display: flex;
+        padding: 1.2rem 1rem 0.8rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+        background: #fff;
+        color: rgba(0, 0, 0, 1);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Nohemi;
+        font-size: 2.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 85%;
+        text-transform: uppercase;
+        background: #fff;
+        border: unset;
+        &::placeholder,
+        &:placeholder-shown {
+          color: rgba(0, 0, 0, 0.5);
         }
       }
+
+      button {
+        display: flex;
+        padding: 1.2rem 1rem 0.8rem;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+        background: var(--Primary-Red, #e7204f);
+        color: var(--bg-color, #f5f1ee);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Nohemi;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 85%;
+        text-transform: uppercase;
+      }
+    }
+    &-end {
+      padding: 0 2.4rem;
+      display: flex;
+      margin-top: auto;
+      color: var(--bg-color, #f5f1ee);
+      font-family: Nohemi;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.8rem;
+      text-transform: uppercase;
+      justify-content: space-between;
     }
   }
 }
