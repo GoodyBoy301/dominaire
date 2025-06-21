@@ -6,6 +6,7 @@
         alt=""
         poster="/images/hero-shadow.webp"
         ref="video"
+        :class="{ playing: isPlaying }"
         :muted="isMuted"
         @ended="isPlaying = false"
         @click="
