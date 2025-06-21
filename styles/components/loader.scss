@@ -37,7 +37,10 @@
     transform: translate(-50%, -50%);
     overflow: hidden;
     z-index: 1;
-    // overflow: visible;
+    @include media("<phone") {
+      width: calc(27.5rem * 0.75);
+      height: calc(40rem * 0.75);
+    }
   }
 
   &-frames {
@@ -87,14 +90,15 @@
     bottom: 0%;
     transform: translateY(17.5%);
     z-index: 5;
+    @include media("<phone") {
+      font-size: calc(20rem * 0.75);
+      line-height: calc(17.5rem * 0.75);
+      letter-spacing: calc(-0.3rem * 0.75);
+    }
   }
 
   .hero-heading {
     transform: translateY(20rem);
     opacity: 0;
-
-    * {
-      // transition: unset !important;
-    }
   }
 }

@@ -44,7 +44,7 @@ html {
   background: var(--Black, #000);
 
   @include media("<phone") {
-    font-size: calc(100vw / 430 * 10);
+    font-size: calc(100vw / 393 * 10);
   }
 }
 

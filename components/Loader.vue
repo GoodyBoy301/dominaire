@@ -31,6 +31,7 @@
 
 <script setup lang="ts">
 import gsap from "gsap";
+import { srcs } from "~/store/images";
 const counter = ref(0);
 const length = ref(1);
 
@@ -60,7 +61,11 @@ onMounted(() => {
       { scale: 1, duration: 0.4 },
       0.6
     );
-  const images = gsap.utils.toArray<HTMLImageElement>("img");
+  const images = srcs.map((src) => {
+    const img = new Image();
+    img.src = src;
+    return img;
+  });
   length.value = images.length;
   images.forEach((img, i) => {
     gsap.delayedCall(0.05 * i, () => {
@@ -119,7 +124,7 @@ onMounted(() => {
           ".loader-frames-wrapper",
           { y: "-50%", scale: 1, yPercent: 0 },
           {
-            scale: 5.5,
+            scale: innerWidth < 768 ? 2.5 : 5.5,
             y: "50%",
             yPercent: 275,
             duration: 1.2,
