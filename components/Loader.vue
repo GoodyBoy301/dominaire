@@ -2,10 +2,17 @@
   <section class="loader">
     <div class="loader-bg"></div>
     <div class="loader-bg-two"></div>
-    <h1 class="hero-heading">
+    <h1 class="hero-heading" v-if="route.name === 'index'">
       <span data-red> <i>Innovative</i> <i> Brands,</i></span>
       <span data-white> <i>Limitless </i> <i>Creativity</i></span>
     </h1>
+    <!-- <div class="projects-hero-header" v-if="route.name === 'projects'">
+      <h1>projects</h1>
+      <p>
+        Featured projects that have been meticulously crafted with passion to
+        drive results and impact
+      </p>
+    </div> -->
     <div class="loader-frames-wrapper">
       <div class="loader-frames">
         <figure class="loader-frame">
@@ -34,6 +41,7 @@ import gsap from "gsap";
 import { srcs } from "~/store/images";
 const counter = ref(0);
 const length = ref(1);
+const route = useRoute();
 
 const props = defineProps<{ onLoaded: () => void }>();
 

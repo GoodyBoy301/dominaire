@@ -3,7 +3,7 @@
     <Header></Header>
     <Loader v-if="isLoading" :onLoaded="onLoaded" />
     <NuxtPage v-else></NuxtPage>
-    <Footer v-if="!isLoading"></Footer>
+    <Footer v-if="!isLoading && route.name === 'index'"></Footer>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
 import gsap from "gsap";
 import { LenisScroll } from "./interactions/base/scroll";
 import "./styles/index.scss";
+const route = useRoute();
 
 const projName = ref("New website");
 const projDesc = ref("Bootstrapped with the Nuxt3 GoodyPlate");
