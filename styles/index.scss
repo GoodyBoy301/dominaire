@@ -9,6 +9,7 @@ $breakpoints: (
 @import "../node_modules/include-media/dist/include-media";
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 @import url("https://fonts.cdnfonts.com/css/humane");
+@import url("https://fonts.cdnfonts.com/css/cutive-mono");
 
 @font-face {
   font-family: "Humane";
@@ -103,4 +104,5 @@ svg {
 @import "./components/works.scss";
 @import "./components/testimonials.scss";
 @import "./components/projects/hero.scss";
+@import "./components/projects";
 @import "./components/footer.scss";

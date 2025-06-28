@@ -8,6 +8,12 @@
     width: 100vw;
     position: relative;
     align-items: center;
+    @include media("<phone") {
+      padding: 14rem 2.4rem;
+      align-items: flex-start;
+      gap: 10rem;
+      flex-direction: column;
+    }
 
     h1 {
       color: var(--Primary-Red, #e7204f);
@@ -17,6 +23,10 @@
       font-weight: 500;
       line-height: 25rem;
       text-transform: uppercase;
+      @include media("<phone") {
+        font-size: 15rem;
+        line-height: 15rem;
+      }
     }
 
     p {
@@ -28,6 +38,11 @@
       line-height: 4.4rem;
       text-transform: uppercase;
       width: 52rem;
+      @include media("<phone") {
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        width: unset;
+      }
     }
 
     div {
@@ -43,12 +58,22 @@
       line-height: 4.4rem;
       text-transform: uppercase;
       display: flex;
+      padding-block: 2.6rem 2.2rem;
+      @include media("<phone") {
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        padding-block: 2.2rem 1.8rem;
+      }
 
       span {
-        animation: marquee 3s linear infinite;
+        animation: marquee 30s linear infinite;
         padding-inline: 10rem;
         gap: 20rem;
         display: flex;
+        @include media("<phone") {
+          padding-inline: 2.2rem;
+          gap: 4.4rem;
+        }
       }
 
       i {

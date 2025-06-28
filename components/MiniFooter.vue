@@ -221,6 +221,8 @@ onMounted(() => {
   });
   gsap.registerPlugin(ScrollTrigger);
 
+  return;
+
   if (innerWidth < 768) return;
 
   gsap
