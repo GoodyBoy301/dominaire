@@ -63,8 +63,27 @@ onMounted(() => {
         autoAlpha: 1,
         yPercent: 0,
         background: "#141519",
+        duration: 0.01,
+        ease: "power1.out",
+      },
+      0
+    )
+    .fromTo(
+      ".header-menu a",
+      {
+        autoAlpha: 1,
+        y: "-100vh",
+        background: "#000",
+        ease: "power1.out",
+        duration: 0.1,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        background: "#141519",
         duration: 0.5,
         ease: "power1.out",
+        stagger: -0.05,
       },
       0
     )
