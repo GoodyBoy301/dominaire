@@ -6,6 +6,7 @@
         alt=""
         poster="/images/hero-shadow.webp"
         ref="video"
+        autoplay="true"
         :class="{ playing: isPlaying }"
         :muted="isMuted"
         @ended="isPlaying = false"
@@ -30,7 +31,7 @@
         <i :class="{ inactive: !isPlaying }"></i>
         {{ isPlaying ? "Stop Reel" : "Play Reel" }}
       </span>
-      <div class="about-media-controls" v-if="currentTime > 0.01">
+      <!-- <div class="about-media-controls" v-if="currentTime > 0.01">
         <div
           class="pauseplay"
           @click="(e:Event) => {e.stopPropagation(); isPlaying = !isPlaying}"
@@ -64,7 +65,7 @@
           <SvgoUnmuted v-if="!isMuted" />
           <SvgoMuted v-else />
         </div>
-      </div>
+      </div> -->
     </figure>
     <div class="about-us">
       <hr />
@@ -85,8 +86,8 @@ import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { formatTime } from "~/utils/time";
 
-const isPlaying = ref(false);
-const isMuted = ref(false);
+const isPlaying = ref(true);
+const isMuted = ref(true);
 const currentTime = ref(0);
 const totalTime = ref(0);
 const video = ref<HTMLVideoElement>(null!);

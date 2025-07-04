@@ -22,10 +22,10 @@
           <img src="/images/loader-002.webp" alt="" />
         </figure>
         <figure class="loader-frame">
-          <img src="/images/loader-001.webp" alt="" />
+          <img src="/images/loader-003.webp" alt="" />
         </figure>
         <figure class="loader-frame">
-          <img src="/images/loader-002.webp" alt="" />
+          <img src="/images/loader-004.webp" alt="" />
         </figure>
         <figure class="loader-mainframe">
           <img src="/images/hero-shadow.webp" alt="" />
@@ -76,10 +76,10 @@ onMounted(() => {
   });
   length.value = images.length;
   images.forEach((img, i) => {
-    gsap.delayedCall(0.05 * i, () => {
+    gsap.delayedCall(0.1 * i, () => {
       img.loading = "eager";
       if (img.clientHeight) {
-        gsap.delayedCall(0.05 * Math.random() * i, () => {
+        gsap.delayedCall(0.1 * Math.random() * i, () => {
           counter.value = counter.value + 1;
         });
         return;

@@ -123,17 +123,22 @@
       }
       &:hover {
         opacity: 1;
+        h4 {
+          filter: grayscale(0);
+        }
       }
     }
 
     h4 {
-      color: #000;
+      color: #e7204f;
       font-family: Humane;
       font-size: 10rem;
       font-style: normal;
       font-weight: 500;
-      line-height: 10rem; /* 100% */
+      line-height: 10rem;
       text-transform: uppercase;
+      transition: filter 0.35s ease-in-out;
+      filter: grayscale(1);
     }
 
     p {

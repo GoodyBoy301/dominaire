@@ -136,7 +136,7 @@
     span[data-one] {
       display: flex;
       width: max-content;
-      animation: marquee 10s linear infinite;
+      animation: marquee 20s linear infinite;
       gap: calc(8.9rem * 0.8);
       padding-inline: calc(4.45rem * 0.8);
       height: 22rem;
@@ -161,7 +161,7 @@
     span[data-two] {
       display: flex;
       width: max-content;
-      animation: marquee 10s linear infinite reverse;
+      animation: marquee 20s linear infinite reverse;
       gap: calc(2.4rem * 0.8);
       padding-inline: calc(1.2rem * 0.8);
       align-items: center;
@@ -182,7 +182,7 @@
     span[data-three] {
       display: flex;
       width: max-content;
-      animation: marquee 10s linear infinite;
+      animation: marquee 30s linear infinite;
       gap: calc(2.4rem * 0.8);
       padding-inline: calc(1.2rem * 0.8);
       align-items: center;

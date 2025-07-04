@@ -10,7 +10,7 @@
     @include media("<phone") {
     }
     * {
-      cursor: pointer;
+      cursor: none;
     }
     video {
       object-fit: cover;
@@ -42,8 +42,8 @@
       position: fixed;
       /* mix-blend-mode: difference; */
       filter: contrast(1.5) saturate(1.5);
-      top: -0.4rem;
-      left: 2rem;
+      top: -0.5rem;
+      left: -5.5rem;
       gap: 1rem;
       display: flex;
       color: var(--bg-color, #f5f1ee);
