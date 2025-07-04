@@ -3,7 +3,7 @@ export const srcs = [
   "/images/hero-001.webp",
   "/images/hero-002.webp",
   "/images/hero-003.webp",
-  "/images/hero-004.webp",
+  "/images/hero-005.webp",
   "/images/loader-001.webp",
   "/images/loader-002.webp",
   "/images/loader-003.webp",

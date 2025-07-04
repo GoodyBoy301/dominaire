@@ -49,7 +49,7 @@ onMounted(() => {
   const tl = gsap
     .timeline({ paused: true, defaults: { ease: "none" } })
     .fromTo(".loader-bg", { yPercent: 0 }, { yPercent: 100, duration: 0.6 }, 0)
-    .fromTo(".loader-frames", { y: "40rem" }, { y: "-48.5rem", duration: 1 }, 0)
+    .fromTo(".loader-frames", { y: "40rem" }, { y: "-72rem", duration: 1 }, 0)
     .fromTo(
       ".loader-frames img",
       { objectPosition: "50% 100%" },
