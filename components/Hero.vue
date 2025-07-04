@@ -50,6 +50,8 @@
           <img src="/images/hero-003.webp" alt="" />
           <i> THIS IS What WE do </i>
           <img src="/images/hero-004.webp" alt="" />
+          <i> THIS IS What WE do </i>
+          <img src="/images/hero-005.webp" alt="" />
         </span>
         <span data-three>
           <i> THIS IS What WE do </i>
@@ -60,6 +62,8 @@
           <img src="/images/hero-003.webp" alt="" />
           <i> THIS IS What WE do </i>
           <img src="/images/hero-004.webp" alt="" />
+          <i> THIS IS What WE do </i>
+          <img src="/images/hero-005.webp" alt="" />
         </span>
       </div>
     </div>
