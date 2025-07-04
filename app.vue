@@ -3,7 +3,8 @@
     <Header></Header>
     <Loader v-if="isLoading" :onLoaded="onLoaded" />
     <NuxtPage v-else></NuxtPage>
-    <Footer v-if="!isLoading && route.name === 'index'"></Footer>
+    <!-- <Footer v-if="!isLoading && route.name === 'index'"></Footer> -->
+    <Footer v-if="!isLoading"></Footer>
   </div>
 </template>
 
