@@ -40,7 +40,7 @@
       transform: translate(var(--x), var(--y));
       pointer-events: none;
       position: fixed;
-      mix-blend-mode: difference;
+      /* mix-blend-mode: difference; */
       filter: contrast(1.5) saturate(1.5);
       top: -0.4rem;
       left: 2rem;

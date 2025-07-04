@@ -1,12 +1,13 @@
 <template>
   <section class="projects-projects">
-    <ul
-      :class="{
-        grid: mode === 'grid',
-        list: mode === 'list',
-        space: mode === 'space',
-      }"
+    <span
+      class="projects-projects-cursor"
+      :style="{ '--x': x + 'px', '--y': y + 'px' }"
     >
+      <SvgoEye filled />
+      {{ "View Project" }}
+    </span>
+    <ul>
       <li>
         <figure :class="layout">
           <img src="/images/works-001-cover.webp" alt="" />
@@ -27,24 +28,10 @@
           <img src="/images/works-004-cover.webp" alt="" />
         </figure>
       </li>
-      <div
-        class="tracker"
-        :class="{
-          grid: mode === 'grid',
-          list: mode === 'list',
-          space: mode === 'space',
-        }"
-      >
+      <div class="tracker">
         <div class="line"></div>
       </div>
-      <div
-        class="shadow"
-        :class="{
-          grid: mode === 'grid',
-          list: mode === 'list',
-          space: mode === 'space',
-        }"
-      >
+      <div class="shadow">
         <div>
           <img src="/images/works-001.webp" alt="" :class="layout" />
           <h2 class="title">Pulse Poetry</h2>
@@ -123,9 +110,9 @@
         In space
       </div>
     </aside>
-    <div class="projects-projects-cover" data-lenis-prevent></div>
-    <div class="projects-projects-bg" data-lenis-prevent></div>
-    <div class="projects-projects-fg" data-lenis-prevent>
+    <div class="projects-projects-cover" data-lenis-prevent data-desktop></div>
+    <div class="projects-projects-bg" data-lenis-prevent data-desktop></div>
+    <div class="projects-projects-fg" data-lenis-prevent data-desktop>
       <div class="bgs">
         <div :class="layout">
           <figure data-animate>
@@ -359,11 +346,17 @@
 </template>
 
 <script setup lang="ts">
-import { Draggable } from "gsap/all";
 import { Observer } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap/src/all";
 const layout = ref<"grid" | "list" | "space">("grid");
+
+const x = ref(0);
+const y = ref(0);
+function onMouseMove(e: MouseEvent) {
+  x.value = e.clientX;
+  y.value = e.clientY;
+}
 
 let fullScreenAnimation = gsap.timeline({
   paused: true,
@@ -372,10 +365,18 @@ let fullScreenAnimation = gsap.timeline({
 const createFullScreenAnimation = () => {
   fullScreenAnimation
     .set(".projects-projects-cover", { autoAlpha: 1 })
-    .fromTo(".projects-projects-cover", { yPercent: 100 }, { yPercent: 0 })
-    .set(".projects-projects-bg", { autoAlpha: 1 })
-    .set(".projects-projects-fg", { autoAlpha: 1 })
-    .fromTo(".projects-projects-cover", { yPercent: 0 }, { yPercent: -100 });
+    .fromTo(
+      ".projects-projects-cover",
+      { yPercent: 100, pointerEvents: "none" },
+      { yPercent: 0, pointerEvents: "auto" }
+    )
+    .set(".projects-projects-bg", { autoAlpha: 1, pointerEvents: "auto" })
+    .set(".projects-projects-fg", { autoAlpha: 1, pointerEvents: "auto" })
+    .fromTo(
+      ".projects-projects-cover",
+      { yPercent: 0, pointerEvents: "none" },
+      { yPercent: -100, pointerEvents: "auto" }
+    );
 };
 
 let listAnimation = gsap.timeline({
@@ -593,7 +594,6 @@ async function Scroll(e: Observer) {
       : _progress <= 0
       ? _progress + 0.5
       : _progress;
-  console.log(progress + _offset);
   gsap.set(listAnimation, {
     progress: progress + _offset,
   });
@@ -614,5 +614,8 @@ onMounted(() => {
   createFullScreenAnimation();
   createListAnimation();
   createInfiniteScroll();
+
+  window.onmousemove = onMouseMove;
+  window.onpointermove = onMouseMove;
 });
 </script>
