@@ -1,0 +1,35 @@
+.project-conclusion {
+  background: #fff;
+  padding: 8.6rem 8rem;
+  position: relative;
+  @include media("<phone") {
+    padding: 10rem 1.6rem;
+    display: none;
+  }
+
+  h3 {
+    color: #000;
+    font-family: Nohemi;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    @include media("<phone") {
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  h4 {
+    color: #000;
+    font-family: Humane;
+    font-size: 10rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10rem;
+    text-transform: uppercase;
+    margin-top: 3.4rem;
+  }
+}
