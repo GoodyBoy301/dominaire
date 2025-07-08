@@ -1,0 +1,80 @@
+.contact-form {
+  position: relative;
+  padding: 12.6rem 0rem 0rem;
+  position: relative;
+  @include media("<phone") {
+    padding: 0;
+  }
+
+  input,
+  textarea {
+    width: 100vw;
+    height: 25rem;
+    flex-shrink: 0;
+    margin-top: -12.6rem;
+    color: #000;
+    font-family: Humane;
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20rem;
+    text-transform: uppercase;
+    padding: 0rem 10rem;
+    transition: margin-top 0.35s ease-in-out;
+    outline: none !important;
+    border: none !important;
+    @include media("<phone") {
+      height: 15rem;
+      margin-top: 0;
+      font-size: 10rem;
+      line-height: 10rem;
+      padding: 1.2rem 0 0 2.4rem;
+      border: 0.1rem solid #000 !important;
+    }
+
+    &:hover {
+      background-color: var(--Primary-Red, #e7204f);
+      color: var(--bg-color, #f5f1ee);
+
+      &:placeholder-shown,
+      &::placeholder {
+        color: #f5f1ee33;
+      }
+    }
+
+    &:placeholder-shown,
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    &.textarea {
+      height: 45.4rem;
+      padding: 13.5rem 10rem;
+      @include media("<phone") {
+        padding: 8rem 4.5rem;
+      }
+    }
+
+    &:focus + * {
+      margin-top: 0;
+    }
+  }
+
+  button {
+    position: absolute;
+    color: #000;
+    font-family: Nohemi;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    bottom: 7.1rem;
+    right: 2.4rem;
+    background: #fcff00;
+    padding: 1.2rem 1rem 0.8rem;
+    @include media("<phone") {
+      left: 2.4rem;
+    }
+  }
+}

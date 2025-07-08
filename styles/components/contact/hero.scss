@@ -1,0 +1,23 @@
+.contact-hero {
+  position: relative;
+  padding: 22.4rem 10rem 9.2rem;
+  @include media("<phone") {
+    padding: 14rem 1.6rem 10.6rem;
+  }
+
+  &-heading {
+    color: var(--Primary-Red, #e7204f);
+    font-family: Humane;
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18rem;
+    text-transform: uppercase;
+    width: 89.7rem;
+    @include media("<phone") {
+      font-size: 14rem;
+      line-height: 100%;
+      width: unset;
+    }
+  }
+}
