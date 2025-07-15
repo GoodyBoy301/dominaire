@@ -1,0 +1,104 @@
+.about-values {
+  background: var(--brand-main, #17181b);
+  padding: 10rem 0;
+  @include media("<phone") {
+    padding: 3.6rem 0 3.2rem;
+  }
+
+  &-heading {
+    padding: 0 10rem;
+    color: var(--bg-color, #f5f1ee);
+    font-family: Humane;
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18rem;
+    text-transform: uppercase;
+    @include media("<phone") {
+      padding: 0 1.6rem;
+    }
+  }
+
+  &-list {
+    margin-top: 14.8rem;
+    display: flex;
+    width: max-content;
+    @include media("<phone") {
+      margin-top: 4.9rem;
+    }
+
+    li:first-of-type {
+      margin-left: 10rem;
+      @include media("<phone") {
+        margin-left: 1.6rem;
+      }
+    }
+    li:last-of-type {
+      padding-right: 0rem;
+      margin-right: 10rem;
+      @include media("<phone") {
+        margin-right: 1.6rem;
+      }
+    }
+
+    li {
+      flex: 1;
+      width: 60rem;
+      flex-shrink: 0;
+      padding-right: 10rem;
+      border-top: 0.1rem solid rgba(245, 241, 238, 0.32);
+      padding-top: 4.7rem;
+      @include media("<phone") {
+        width: 35rem;
+        padding-right: 4.8rem;
+      }
+    }
+
+    h4 {
+      color: var(--bg-color, #f5f1ee);
+      /* font-family: Thunder; */
+      font-family: Nohemi;
+      /* font-size: 5rem; */
+      font-size: 4rem;
+      font-style: normal;
+      /* font-weight: 700; */
+      font-weight: 600;
+      line-height: 5rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: var(--bg-color, #f5f1ee);
+      font-family: Humane;
+      font-size: 10rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 10rem;
+      text-transform: uppercase;
+      margin-top: 1.4rem;
+      @include media("<phone") {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+      @include media("<phone") {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+    }
+
+    p {
+      color: var(--bg-color, #f5f1ee);
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      margin-top: 3.2rem;
+      @include media("<phone") {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+}

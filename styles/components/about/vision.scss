@@ -1,0 +1,79 @@
+.about-vision {
+  background: var(--Grey, #e6e6e6);
+  padding: 12rem 9rem;
+  margin: -0.1rem 0;
+  display: flex;
+  gap: 2.8rem;
+  @include media("<phone") {
+    padding: 8rem 0.6rem;
+    flex-direction: column;
+  }
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 0;
+    @include media("<phone") {
+      padding: 0 1.6rem;
+      gap: 3.2rem;
+    }
+    h2 {
+      color: var(--Black, #000);
+      font-family: Humane;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18rem;
+      text-transform: uppercase;
+      @include media("<phone") {
+        font-size: 10rem;
+        line-height: 10rem;
+      }
+    }
+    p {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      max-width: 67.6rem;
+      /* margin-top: 1.2rem; */
+      @include media("<phone") {
+        font-size: 1.55rem;
+        line-height: 2.8rem;
+      }
+    }
+  }
+
+  &-deco {
+    display: flex;
+    gap: 2.8rem;
+
+    svg:nth-of-type(1) {
+      width: 12.8rem;
+      height: 12.8rem;
+      @include media("<phone") {
+        font-size: 1.55rem;
+        line-height: 2.8rem;
+      }
+    }
+    svg:nth-of-type(2) {
+      width: 19.2rem;
+      height: 19.2rem;
+      @include media("<phone") {
+        font-size: 1.55rem;
+        line-height: 2.8rem;
+      }
+    }
+    svg:nth-of-type(3) {
+      width: 25.6rem;
+      height: 25.6rem;
+      @include media("<phone") {
+        display: none;
+      }
+    }
+  }
+}
