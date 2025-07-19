@@ -1,0 +1,140 @@
+.services-approach {
+  /* padding: 8rem 8rem 6.8rem; */
+  background: #e7fde7;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+  @include media("<phone") {
+    padding: 8rem 1.6rem 8.1rem;
+  }
+
+  .tags {
+    position: absolute;
+    z-index: 2;
+    width: 250vw;
+    display: flex;
+    justify-content: space-between;
+    left: -10rem;
+    bottom: 2rem;
+    align-items: center;
+
+    h4 {
+      color: #000;
+      font-family: Humane;
+      font-size: 9rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 9rem;
+      text-transform: uppercase;
+      width: 34rem;
+    }
+
+    h5 {
+      color: #000;
+      font-family: Humane;
+      font-size: 9rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 9rem;
+      text-transform: uppercase;
+      width: 16.2rem;
+    }
+
+    hr {
+      flex: 1;
+      margin-inline: 5rem;
+    }
+
+    p {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.8rem;
+      text-transform: uppercase;
+      width: 34rem;
+    }
+  }
+
+  &-list {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    @include media("<phone") {
+    }
+
+    li {
+      flex-shrink: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 9.9rem 8.6rem;
+      position: relative;
+    }
+
+    h3 {
+      color: #000;
+      font-family: Humane;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18rem;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 2.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      width: 52.5rem;
+    }
+
+    .medias {
+      figure {
+        width: 57rem;
+        height: 40.9rem;
+        position: absolute;
+      }
+
+      figure:nth-of-type(1) {
+        right: 0;
+        top: -10.9rem;
+      }
+      figure:nth-of-type(2) {
+        left: 0;
+        bottom: -18.4rem;
+      }
+    }
+
+    .tags {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column-reverse;
+      position: absolute;
+      right: 13.4rem;
+      bottom: 3.1rem;
+      top: 40vh;
+      gap: 4rem;
+      flex-wrap: wrap-reverse;
+
+      i {
+        padding: 1rem;
+        background: #fcff00;
+        width: fit-content;
+        margin-right: auto;
+      }
+    }
+  }
+}
