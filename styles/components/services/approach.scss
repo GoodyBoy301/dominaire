@@ -6,6 +6,7 @@
   overflow: hidden;
   @include media("<phone") {
     padding: 8rem 1.6rem 8.1rem;
+    opacity: 0;
   }
 
   .tags {

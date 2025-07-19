@@ -32,28 +32,50 @@ import { ScrollTrigger } from "gsap/src/all";
 import gsap from "gsap/src/all";
 
 onMounted(() => {
-  if (innerWidth >= 768) return;
   gsap.registerPlugin(ScrollTrigger);
-
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".about-stats",
-        start: "100% 100%",
-        end: `+=${innerWidth * 3}`,
-        scrub: true,
-        pin: true,
-      },
-    })
-    .fromTo(
-      ".about-stats-list li",
-      {
-        x: "0",
-      },
-      {
-        x: "-95rem",
-        ease: "none",
-      }
-    );
+  if (innerWidth >= 768) {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".about-stats",
+          start: "100% 100%",
+          end: `+=${innerWidth * 1.5}`,
+          scrub: true,
+          pin: true,
+        },
+      })
+      .fromTo(
+        ".about-stats-list li",
+        {
+          width: "136rem",
+        },
+        {
+          width: "32rem",
+          stagger: 0.45,
+          ease: "none",
+        }
+      );
+  } else {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".about-stats",
+          start: "100% 100%",
+          end: `+=${innerWidth * 3}`,
+          scrub: true,
+          pin: true,
+        },
+      })
+      .fromTo(
+        ".about-stats-list li",
+        {
+          x: "0",
+        },
+        {
+          x: "-95rem",
+          ease: "none",
+        }
+      );
+  }
 });
 </script>

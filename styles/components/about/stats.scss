@@ -65,6 +65,7 @@
       display: grid;
       place-content: center;
       text-align: center;
+      flex-shrink: 0;
     }
 
     li:nth-of-type(1) {
