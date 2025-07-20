@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ active: isMenuOpen }">
     <NuxtLink class="header-logo"> Dominaire Agency </NuxtLink>
     <button class="header-hamburger" @click="isMenuOpen = !isMenuOpen">
       <span data-menu>
@@ -17,23 +17,30 @@
       </span>
     </button>
     <div class="header-menu">
-      <NuxtLink>
+      <NuxtLink href="/">
         <span> Home </span>
       </NuxtLink>
-      <NuxtLink>
+      <NuxtLink href="/services">
         <aside />
         <span> Services </span>
       </NuxtLink>
-      <NuxtLink>
-        <span> About Us </span>
+      <NuxtLink href="/about">
+        <span> Studio </span>
       </NuxtLink>
-      <NuxtLink>
+      <NuxtLink href="/projects">
         <aside />
         <span> Projects </span>
       </NuxtLink>
-      <NuxtLink>
-        <span> contact us </span>
-      </NuxtLink>
+      <div class="header-menu-contact">
+        <div>
+          <a href="">x(twitter)</a>
+          <a href="">dribbble</a>
+          <a href="">awwwards</a>
+          <a href="">linkedin</a>
+          <a href="">instagram</a>
+          <h6>Reach out to us</h6>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -45,46 +52,56 @@ import gsap from "gsap";
 onMounted(() => {
   const tl = gsap
     .timeline({ paused: true, defaults: { ease: "power1.inOut" } })
-    .fromTo(
+    .to(
       ".header-hamburger",
-      { backgroundColor: "#E7204F00" },
-      { backgroundColor: "#E7204F", duration: 0.3 },
+      {
+        backgroundColor: "#F5F1EE",
+        width: "32.8rem",
+        right: "3.8rem",
+        duration: 0.3,
+      },
       0.1
     )
     .fromTo(
       ".header-menu",
       {
         autoAlpha: 1,
-        yPercent: -100,
-        background: "#000",
+        xPercent: 100,
+        background: "#F5F1EE",
         ease: "power1.out",
       },
       {
         autoAlpha: 1,
-        yPercent: 0,
-        background: "#141519",
-        duration: 0.01,
+        xPercent: 0,
+        background: "#F5F1EE",
+        duration: 0.5,
         ease: "power1.out",
       },
       0
     )
+    // .fromTo(
+    //   ".header-menu a",
+    //   {
+    //     autoAlpha: 1,
+    //     y: "-100vh",
+    //     background: "#000",
+    //     ease: "power1.out",
+    //     duration: 0.1,
+    //   },
+    //   {
+    //     autoAlpha: 1,
+    //     y: 0,
+    //     background: "#141519",
+    //     duration: 0.5,
+    //     ease: "power1.out",
+    //     stagger: -0.05,
+    //   },
+    //   0
+    // )
     .fromTo(
-      ".header-menu a",
-      {
-        autoAlpha: 1,
-        y: "-100vh",
-        background: "#000",
-        ease: "power1.out",
-        duration: 0.1,
-      },
-      {
-        autoAlpha: 1,
-        y: 0,
-        background: "#141519",
-        duration: 0.5,
-        ease: "power1.out",
-        stagger: -0.05,
-      },
+      ".header-hamburger",
+      { background: "#F5F1EE00" },
+      { background: "#F5F1EE", duration: 0.2, stagger: { amount: 0.07 } },
       0
     )
     .fromTo(
