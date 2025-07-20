@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="861" viewBox="0 0 1440 861" fill="none">
+  <g clip-path="url(#clip0_398_5795)">
+    <rect width="1440" height="861" fill="#F5F1EE"/>
+    <rect width="1440" height="861" fill="url(#pattern0_398_5795)" fill-opacity="0.05"/>
+    <rect width="124" height="44" transform="translate(1244 176)" fill="#E7204F"/>
+    <path d="M1273 198H1259" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1266 191L1259 198L1266 205" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1301 193L1311 203" stroke="#F5F1EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1297 193L1307 203" stroke="#F5F1EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1305 193L1315 203" stroke="#F5F1EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1339 198H1353" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1346 191L1353 198L1346 205" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_398_5795">
+      <rect width="1440" height="861" fill="white"/>
+    </clipPath>
+    <pattern id="pattern0_398_5795" patternUnits="userSpaceOnUse" viewBox="9799 -100.05 45.9 22.95" width="3.1874998410542803%" height="2.6655050935645552%" x="712.5" y="423" patternContentUnits="objectBoundingBox">
+      <g id="pattern0_398_5795_inner">
+        <rect x="9799.5" y="-122.5" width="14" height="14" stroke="black"/>
+      </g>
+      <use xlink:href="#pattern0_398_5795_inner" transform="translate(0 22.95)"/>
+      <use xlink:href="#pattern0_398_5795_inner" transform="translate(22.95 11.475)"/>
+      <use xlink:href="#pattern0_398_5795_inner" transform="translate(22.95 34.425)"/>
+    </pattern></defs>
+  </svg>

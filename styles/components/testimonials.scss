@@ -1,8 +1,26 @@
 .testimonials {
   height: calc(100vh);
+  position: relative;
+  background-color: #f5f1ee;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    bottom: 0;
+    img {
+      object-fit: contain;
+      object-position: top;
+    }
+    @include media("<phone") {
+      width: 400vw;
+    }
+  }
+
   &-heading {
     width: 100vw;
-    background: var(--brand-main, #17181b);
+    /* background: var(--brand-main, #17181b); */
     display: flex;
     padding-top: 7rem;
     height: 47rem;
@@ -76,7 +94,7 @@
 
   &-testimonials {
     padding: 7.2rem;
-    background: #f5f1ee;
+    /* background: #f5f1ee; */
     display: flex;
     gap: 6.7rem;
     position: relative;
@@ -84,7 +102,7 @@
     @include media("<phone") {
       gap: 4.8rem;
       padding: 2.4rem;
-      padding-top: 45rem;
+      padding-top: 30rem;
       height: calc(100vh + 18rem);
     }
 
@@ -100,8 +118,8 @@
       top: 8rem;
       left: 8rem;
       @include media("<phone") {
-        font-size: 15rem;
-        top: 16rem;
+        font-size: 13rem;
+        top: 7rem;
         left: 2.4rem;
         right: 2.4rem;
         line-height: 82.5%;
@@ -114,31 +132,41 @@
       opacity: 0.4;
       border-bottom: 0.1rem solid #000;
       padding-bottom: 2.7rem;
-      transition: opacity 0.35s ease-in-out;
+      transition: border-color 0.35s ease-in-out, opacity 0.35s ease-in-out;
       cursor: default;
+      border: 0.1rem solid #00000000;
+      height: 40rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
       @include media("<phone") {
         opacity: 1;
         width: 34.6rem;
-        height: fit-content;
+        height: 32rem;
       }
       &:hover {
         opacity: 1;
-        h4 {
+        border-color: #00000033;
+        aside {
           filter: grayscale(0);
         }
       }
     }
 
     h4 {
-      color: #e7204f;
+      /* color: #e7204f; */
+      color: #000000;
       font-family: Humane;
       font-size: 10rem;
       font-style: normal;
       font-weight: 500;
       line-height: 10rem;
       text-transform: uppercase;
-      transition: filter 0.35s ease-in-out;
       filter: grayscale(1);
+      margin: 3.2rem 2.4rem 1.2rem;
+      @include media("<phone") {
+        margin: 2.4rem 2.4rem 0.6rem;
+      }
     }
 
     p {
@@ -149,32 +177,71 @@
       font-weight: 400;
       line-height: 3.2rem;
       text-transform: uppercase;
-      margin-top: 1.8rem;
+      margin: 0 2.4rem;
       @include media("<phone") {
-        font-size: 2rem;
-        line-height: 3rem;
+        color: #000;
+        font-family: Nohemi;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; /* 150% */
+        text-transform: uppercase;
+      }
+    }
+
+    aside {
+      transition: filter 0.35s ease-in-out;
+      background: #e7204f;
+      display: flex;
+      justify-content: space-between;
+      padding: 2.4rem 2.4rem;
+      margin-top: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      align-items: center;
+      @include media("<phone") {
+        padding: 1.2rem 2.4rem;
       }
     }
 
     h5 {
-      margin-top: 1.8rem;
-      color: #000;
+      /* margin-top: 1.8rem; */
+      color: #fff;
       font-family: Nohemi;
       font-size: 2.4rem;
       font-style: normal;
       font-weight: 400;
       line-height: 3.2rem;
       text-transform: uppercase;
+      @include media("<phone") {
+        color: #fff;
+        font-family: Nohemi;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; /* 150% */
+        text-transform: uppercase;
+      }
     }
 
     h6 {
       margin-top: 0.4rem;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(256, 256, 256, 0.5);
       font-family: Nohemi;
       font-size: 1.6rem;
       font-style: normal;
       font-weight: 400;
       line-height: 3.2rem;
+      @include media("<phone") {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: Nohemi;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; /* 200% */
+      }
     }
   }
 }

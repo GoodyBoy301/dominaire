@@ -1,6 +1,9 @@
 <template>
   <section class="testimonials">
-    <h2 class="testimonials-heading">
+    <div class="testimonials-bg">
+      <img src="/images/testimonials-bg.svg" alt="" />
+    </div>
+    <!-- <h2 class="testimonials-heading">
       <div>
         <span>
           Testimonials
@@ -29,7 +32,7 @@
           <i>word of mouth</i>
         </span>
       </div>
-    </h2>
+    </h2> -->
     <ul class="testimonials-testimonials">
       <h3>words from our clients</h3>
       <li>
@@ -39,8 +42,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -50,8 +55,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -61,8 +68,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -72,8 +81,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -83,8 +94,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -94,8 +107,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -105,8 +120,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
       <li>
@@ -116,8 +133,10 @@
             Our mission is to empower the brands we believe in with tailor-made
             approaches that ignite creativity and growth without limits.
           </p>
-          <h5>olanrewaju KB</h5>
-          <h6>Marketing and comms</h6>
+          <aside>
+            <h5>olanrewaju KB</h5>
+            <h6>Marketing and comms</h6>
+          </aside>
         </div>
       </li>
     </ul>
@@ -144,16 +163,6 @@ onMounted(() => {
         pin: true,
       },
     })
-    .fromTo(
-      ".testimonials-heading",
-      { yPercent: 0 },
-      { yPercent: 0, duration: 0.125 }
-    )
-    .fromTo(
-      ".testimonials-testimonials",
-      { y: 0 },
-      { y: "-46.68rem", duration: 0.5 }
-    )
     .fromTo(
       ".testimonials-testimonials li",
       { x: 0 },
