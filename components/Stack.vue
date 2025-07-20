@@ -41,13 +41,17 @@
         <div>
           <h3>
             web design
-            <i>UX Research</i>
-            <i>UI Design</i>
+            <i data-desktop>UX Research</i>
+            <i data-desktop>UI Design</i>
           </h3>
           <p>
             We create modern and visually stunning websites that perfectly suit
             your needs.
           </p>
+          <h4 data-mobile>
+            <i data-mobile>UX Research</i>
+            <i data-mobile>UI Design</i>
+          </h4>
         </div>
       </li>
       <li
@@ -64,16 +68,16 @@
             <i>Blogs</i>
             <i>E-commerce</i>
           </h3>
-          <h3 data-mobile>
-            WEB DEV.
-            <i>Corporate site</i>
-            <i>Blogs</i>
-            <i>E-commerce</i>
-          </h3>
+          <h3 data-mobile>WEB DEV.</h3>
           <p>
             We build websites tailored to your business, ensuring they are fast,
             secure, and easy to use.
           </p>
+          <h4 data-mobile>
+            <i>Corporate site</i>
+            <i>Blogs</i>
+            <i>E-commerce</i>
+          </h4>
         </div>
       </li>
       <li
@@ -86,13 +90,17 @@
         <div>
           <h3>
             Marketing
-            <i>SEO</i>
-            <i>SOCIAL MEDIA ADS</i>
+            <i data-desktop>SEO</i>
+            <i data-desktop>SOCIAL MEDIA ADS</i>
           </h3>
           <p>
             We help your website rank higher in search engine results, improving
             visibility and driving more traffic.
           </p>
+          <h4 data-mobile>
+            <i>SEO</i>
+            <i>SOCIAL MEDIA ADS</i>
+          </h4>
         </div>
       </li>
       <li
@@ -105,13 +113,17 @@
         <div>
           <h3>
             branding
-            <i>Logos</i>
-            <i>illustrations</i>
+            <i data-desktop>Logos</i>
+            <i data-desktop>illustrations</i>
           </h3>
           <p>
             We create a unique identity for your brand, helping to set you apart
             from the competition.
           </p>
+          <h4 data-mobile>
+            <i>Logos</i>
+            <i>illustrations</i>
+          </h4>
         </div>
       </li>
     </ul>

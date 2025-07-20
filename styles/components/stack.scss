@@ -229,7 +229,8 @@
       }
     }
 
-    h3 {
+    h3,
+    h4 {
       color: var(--color);
       font-family: Humane;
       font-size: 30rem;
@@ -241,6 +242,10 @@
       @include media("<phone") {
         font-size: 15rem;
         line-height: 12rem;
+        display: flex;
+        gap: 0.2rem 1.2rem;
+        max-width: 100%;
+        flex-wrap: wrap;
       }
 
       i {
@@ -269,6 +274,10 @@
           font-size: 2.4rem;
           line-height: 3.2rem;
           height: 5.2rem;
+          position: unset;
+          order: 2;
+          transform: unset !important;
+          margin-top: 1rem;
         }
         &:nth-of-type(2) {
           transition-delay: 0.05s;

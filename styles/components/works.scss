@@ -104,6 +104,19 @@
       position: relative;
       @include media("<phone") {
         width: 34.5rem;
+        background-color: transparent !important;
+        &:nth-of-type(1) h6 {
+          left: 16.8rem !important;
+        }
+        &:nth-of-type(2) h6 {
+          left: 16.4rem !important;
+        }
+        &:nth-of-type(3) h6 {
+          left: 16.4rem !important;
+        }
+        &:nth-of-type(4) h6 {
+          left: 11.8rem !important;
+        }
       }
       &:hover {
         figure {
@@ -164,6 +177,10 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+      @include media("<phone") {
+        top: 9rem;
+        height: 75%;
+      }
 
       img {
         object-fit: contain;
@@ -225,11 +242,17 @@
       pointer-events: none;
       filter: blur(0rem);
       @include media("<phone") {
-        bottom: unset;
-        top: 6rem;
-        font-size: 15rem;
-        left: 1.3rem;
-        line-height: 82.5%;
+        color: #fff;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Humane;
+        font-size: 10rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10rem;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
       }
 
       .line {
@@ -286,6 +309,19 @@
         right: unset;
         left: -1.2rem;
         width: fit-content;
+        transform: unset !important;
+        padding: 0.3rem 1rem 0.1rem;
+        bottom: 0.6rem !important;
+        left: 0rem !important;
+        color: #000;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Nohemi;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3.2rem;
+        text-transform: uppercase;
       }
 
       &:nth-of-type(2) {
@@ -322,6 +358,19 @@
         right: -1.2rem;
         transform: translateY(0%);
         bottom: 24rem;
+        transform: unset !important;
+        padding: 0.3rem 1rem 0.1rem;
+        bottom: 0.6rem !important;
+        width: fit-content;
+        color: #000;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Nohemi;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3.2rem;
+        text-transform: uppercase;
       }
     }
 
@@ -346,8 +395,22 @@
       right: 3.2rem;
       bottom: 3.2rem;
       @include media("<phone") {
-        right: 1.6rem;
-        bottom: 1.6rem;
+        bottom: 0rem;
+        right: 0rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        overflow: hidden;
+        background-color: #000000;
+        opacity: 1 !important;
+        span {
+          display: none;
+        }
+        svg {
+          transform: rotate(-45deg);
+        }
+        path {
+          stroke: #ffffff !important;
+        }
       }
 
       svg {

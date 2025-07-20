@@ -54,7 +54,7 @@
           <i> website design </i>
           <h6>2024</h6>
           <NuxtLink href="/" target="_blank">
-            view project
+            <span> view project</span>
             <SvgoArrowDownRight />
           </NuxtLink>
         </div>
@@ -83,7 +83,7 @@
           <i> website design </i>
           <h6>2025</h6>
           <NuxtLink href="/" target="_blank">
-            view project
+            <span> view project</span>
             <SvgoArrowDownRight />
           </NuxtLink>
         </div>
@@ -113,7 +113,7 @@
           <i> website design </i>
           <h6>2023</h6>
           <NuxtLink href="/" target="_blank">
-            view project
+            <span> view project</span>
             <SvgoArrowDownRight />
           </NuxtLink>
         </div>
@@ -142,7 +142,7 @@
           <i> branding </i>
           <h6>2025</h6>
           <NuxtLink href="/" target="_blank">
-            view project
+            <span> view project</span>
             <SvgoArrowDownRight />
           </NuxtLink>
         </div>
