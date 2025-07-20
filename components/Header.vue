@@ -79,25 +79,22 @@ onMounted(() => {
       },
       0
     )
-    // .fromTo(
-    //   ".header-menu a",
-    //   {
-    //     autoAlpha: 1,
-    //     y: "-100vh",
-    //     background: "#000",
-    //     ease: "power1.out",
-    //     duration: 0.1,
-    //   },
-    //   {
-    //     autoAlpha: 1,
-    //     y: 0,
-    //     background: "#141519",
-    //     duration: 0.5,
-    //     ease: "power1.out",
-    //     stagger: -0.05,
-    //   },
-    //   0
-    // )
+    .fromTo(
+      ".header-menu > a span",
+      {
+        autoAlpha: 1,
+        yPercent: 100,
+        ease: "power1.out",
+      },
+      {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 0.2,
+        ease: "power1.out",
+        stagger: 0.025,
+      },
+      0
+    )
     .fromTo(
       ".header-hamburger",
       { background: "#F5F1EE00" },
