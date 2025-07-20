@@ -1,0 +1,123 @@
+.about-clients {
+  background: var(--Grey, #e6e6e6);
+  padding: 5.2rem 9rem;
+  margin: -0.1rem 0;
+  display: flex;
+  gap: 2.8rem;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+  @include media("<phone") {
+    padding: 8rem 0.6rem;
+    flex-direction: column;
+  }
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 0;
+    @include media("<phone") {
+      padding: 0 1.6rem;
+      gap: 3.2rem;
+    }
+    h2 {
+      color: var(--Black, #000);
+      font-family: Humane;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18rem;
+      text-transform: uppercase;
+      @include media("<phone") {
+        font-size: 9rem;
+        line-height: 9rem;
+        white-space: pre;
+      }
+    }
+  }
+
+  &-list {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 4.8rem 0;
+    background: #141519;
+    transform-origin: 75% 50%;
+    transform: scale(0.5);
+    @include media("<phone") {
+      transform: scale(0.75);
+      transform-origin: 50% 100%;
+    }
+
+    div {
+      gap: 4.8rem;
+      display: flex;
+      flex-shrink: 0;
+      li:last-of-type {
+        margin-right: 4.8rem;
+      }
+    }
+
+    li {
+      display: flex;
+      width: calc(41.5rem * 1.25);
+      height: calc(100vh - 9.6rem);
+      padding: calc(7.8rem * 1.25) calc(10rem * 1.25);
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      position: relative;
+      &:hover {
+        img {
+          filter: blur(1.3rem);
+          transform: scale(1.025);
+          opacity: 0.4;
+        }
+      }
+    }
+
+    figure {
+      position: absolute;
+      inset: 0;
+      filter: blur(0.1rem);
+      background-color: #000;
+      overflow: hidden;
+      img {
+        opacity: 0.6;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    h4 {
+      color: var(--bg-color, #f5f1ee);
+      font-family: Humane;
+      font-size: calc(15rem * 1.25);
+      font-style: normal;
+      font-weight: 500;
+      line-height: calc(15rem * 1.25);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      white-space: pre;
+    }
+
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: Nohemi;
+      font-size: calc(2.8rem * 1.25);
+      font-style: normal;
+      font-weight: 400;
+      line-height: calc(3.2rem * 1.25);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      white-space: pre;
+    }
+  }
+}

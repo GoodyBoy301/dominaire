@@ -3,6 +3,7 @@
     <AboutHero />
     <AboutStats />
     <AboutProcess />
+    <AboutClients />
     <AboutVision />
     <AboutValues />
     <!-- <figure class="about-about" data-desktop>
