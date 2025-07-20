@@ -48,7 +48,7 @@
         </div>
         <div>
           <img src="/images/works-002.webp" alt="" :class="layout" />
-          <h2 class="title">KILMANJAROO aROMA</h2>
+          <h2 class="title">KILMANJAROO</h2>
           <p class="description">
             Digital advertising agency focused on mobile app user acquisition.
           </p>
@@ -146,7 +146,7 @@
 
           <div :class="layout">
             <div class="foot" :class="layout">
-              <h2 class="title">KILMANJAROO aROMA</h2>
+              <h2 class="title">KILMANJAROO</h2>
               <p class="description">
                 Digital advertising agency focused on mobile app user
                 acquisition.
@@ -246,7 +246,7 @@
 
           <div :class="layout">
             <div class="foot" :class="layout">
-              <h2 class="title">KILMANJAROO aROMA</h2>
+              <h2 class="title">KILMANJAROO</h2>
               <p class="description">
                 Digital advertising agency focused on mobile app user
                 acquisition.

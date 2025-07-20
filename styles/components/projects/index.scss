@@ -384,7 +384,7 @@
         }
         &.space {
           left: 11.9rem;
-          right: 15.7rem;
+          right: 8.7rem;
           height: 56rem;
           figure {
             display: none;
@@ -440,8 +440,8 @@
         }
         &.space {
           height: 10%;
-          top: -0rem;
-          left: 0;
+          bottom: 0;
+          right: 0;
           background-color: #000;
         }
       }
@@ -466,9 +466,12 @@
         }
         &.space {
           height: 10%;
-          top: -0rem;
-          right: 45.1rem;
+          bottom: 0;
+          left: calc(86rem - 10rem);
+          width: 32rem;
           background-color: #000;
+          text-align: left !important;
+          justify-content: flex-start;
         }
 
         hr {
@@ -496,11 +499,34 @@
         }
 
         &.space {
-          left: 80.3rem;
-          bottom: 0rem;
+          left: calc(86rem - 10rem);
+          bottom: -3.9rem;
           right: 0rem;
-          height: calc(100% - 2.9rem - 7rem);
+          height: 28rem;
+          /* height: calc(100% - 2.9rem - 7rem); */
           background-color: #000;
+          width: max-content;
+          overflow: visible;
+
+          .title {
+            width: 64rem;
+            white-space: pre;
+            color: var(--Grey, #e6e6e6);
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Humane;
+            font-size: 20rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20rem;
+            letter-spacing: -0.2rem;
+            text-transform: uppercase;
+          }
+
+          .description,
+          a {
+            display: none;
+          }
         }
       }
       .title {
