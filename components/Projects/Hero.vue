@@ -2,6 +2,9 @@
   <section class="projects-hero">
     <div class="projects-hero-header">
       <h1>projects</h1>
+      <figure data-desktop>
+        <img src="/images/works-002-cover.webp" alt="" />
+      </figure>
       <p>
         Featured projects that have been meticulously crafted with passion to
         drive results and impact
