@@ -12,102 +12,108 @@
         <figure :class="layout">
           <img src="/images/works-001-cover.webp" alt="" />
         </figure>
+        <h2 class="title">Pulse Poetry</h2>
+        <p class="description">
+          Digital advertising agency focused on mobile app user acquisition.
+        </p>
+        <h3 class="title-shadow">Pulse Poetry</h3>
+        <p class="year">2025</p>
+        <div class="tags" :class="layout">
+          <span>Website design</span>
+          <hr />
+          <span>Marketiing</span>
+        </div>
+        <NuxtLink href="" :class="layout">
+          <span>view project</span>
+          <SvgoArrowDownRight filled />
+        </NuxtLink>
       </li>
       <li>
         <figure>
           <img src="/images/works-002-cover.webp" alt="" />
         </figure>
+        <h2 class="title">KILMANJAROO</h2>
+        <p class="description">
+          Grown in the heart of Tanzania, our premium coffee beans deliver a
+          bold, luxurious taste that awakens your senses and connects you to the
+          land where coffee thrives.
+        </p>
+        <h3 class="title-shadow">KILMANJAROO AROMA</h3>
+        <p class="year">2025</p>
+        <div class="tags" :class="layout">
+          <span>Website design</span>
+          <hr />
+          <span>Marketiing</span>
+        </div>
+        <NuxtLink href="" :class="layout">
+          <span>view project</span>
+          <SvgoArrowDownRight filled />
+        </NuxtLink>
       </li>
       <li>
         <figure>
           <img src="/images/works-003-cover.webp" alt="" />
         </figure>
+        <h2 class="title">COVAPAY</h2>
+        <p class="description">
+          The goal of Covapay is to bridge the gap between traditional payment
+          methods and modern digital solutions, making it easier for small
+          businesses to adapt to changing consumer preferences and technological
+          advancements.
+        </p>
+        <h3 class="title-shadow">COVAPAY</h3>
+        <p class="year">2025</p>
+        <div class="tags" :class="layout">
+          <span>Website design</span>
+          <hr />
+          <span>Product Design</span>
+        </div>
+        <NuxtLink href="" :class="layout">
+          <span>view project</span>
+          <SvgoArrowDownRight filled />
+        </NuxtLink>
       </li>
       <li>
         <figure>
           <img src="/images/works-004-cover.webp" alt="" />
         </figure>
+        <h2 class="title">TARA</h2>
+        <p class="description">
+          The goal of Covapay is to bridge the gap between traditional payment
+          methods and modern digital solutions, making it easier for small
+          businesses to adapt to changing consumer preferences and technological
+          advancements.
+        </p>
+        <h3 class="title-shadow">TARA</h3>
+        <p class="year">2025</p>
+        <div class="tags" :class="layout">
+          <span>Website design</span>
+          <hr />
+          <span>Product Design</span>
+        </div>
+        <NuxtLink href="" :class="layout">
+          <span>view project</span>
+          <SvgoArrowDownRight filled />
+        </NuxtLink>
       </li>
       <div class="tracker">
         <div class="line"></div>
-      </div>
-      <div class="shadow">
-        <div>
-          <img src="/images/works-001.webp" alt="" :class="layout" />
-          <h2 class="title">Pulse Poetry</h2>
-          <p class="description">
-            Digital advertising agency focused on mobile app user acquisition.
-          </p>
-          <p class="year">2025</p>
-          <div class="tags" :class="layout">
-            <span>Website design</span>
-            <hr />
-            <span>Marketiing</span>
-          </div>
-          <NuxtLink href="" :class="layout"> ////visit website//// </NuxtLink>
-        </div>
-        <div>
-          <img src="/images/works-002.webp" alt="" :class="layout" />
-          <h2 class="title">KILMANJAROO</h2>
-          <p class="description">
-            Digital advertising agency focused on mobile app user acquisition.
-          </p>
-          <p class="year">2025</p>
-          <div class="tags" :class="layout">
-            <span>Website design</span>
-            <hr />
-            <span>Marketiing</span>
-          </div>
-          <NuxtLink href="" :class="layout"> ////visit website//// </NuxtLink>
-        </div>
-        <div>
-          <img src="/images/works-003.webp" alt="" :class="layout" />
-          <h2 class="title">COVAPAY</h2>
-          <p class="description">
-            The goal of Covapay is to bridge the gap between traditional payment
-            methods and modern digital solutions, making it easier for small
-            businesses to adapt to changing consumer preferences and
-            technological advancements.
-          </p>
-          <p class="year">2025</p>
-          <div class="tags" :class="layout">
-            <span>Website design</span>
-            <hr />
-            <span>Product Design</span>
-          </div>
-          <NuxtLink href="" :class="layout"> ////visit website//// </NuxtLink>
-        </div>
-        <div>
-          <img src="/images/works-004.webp" alt="" :class="layout" />
-          <h2 class="title">TARA</h2>
-          <p class="description">
-            The goal of Covapay is to bridge the gap between traditional payment
-            methods and modern digital solutions, making it easier for small
-            businesses to adapt to changing consumer preferences and
-            technological advancements.
-          </p>
-          <p class="year">2025</p>
-          <div class="tags" :class="layout">
-            <span>Website design</span>
-            <hr />
-            <span>Product Design</span>
-          </div>
-          <NuxtLink href="" :class="layout"> ////visit website//// </NuxtLink>
-        </div>
       </div>
     </ul>
     <aside>
       <div :class="{ active: layout === 'grid' }" @click="openGrid">
         <SvgoGrid filled />
-        Grid
+        <span> Grid </span>
       </div>
+      <hr />
       <div :class="{ active: layout === 'list' }" @click="openList">
         <SvgoList filled />
-        List
+        <span> List </span>
       </div>
+      <hr />
       <div :class="{ active: layout === 'space' }" @click="openSpace">
         <SvgoSpace filled />
-        In space
+        <span> Gallery </span>
       </div>
     </aside>
     <div class="projects-projects-cover" data-lenis-prevent data-desktop></div>
@@ -505,22 +511,27 @@ const createListAnimation = () => {
     )
     .fromTo(
       ".projects-projects-fg .bgs .year",
-      { yPercent: 0, clipPath: "inset(0% 0% 0% 0%)" },
+      { autoAlpha: 1 },
       {
-        yPercent: -100,
-        clipPath: "inset(100% 0% 0% 0%)",
+        autoAlpha: -10,
         duration: 0.5,
-        // delay: 0.2,
         stagger: -0.5,
       },
+      // { yPercent: 0, clipPath: "inset(0% 0% 0% 0%)" },
+      // {
+      //   yPercent: -100,
+      //   clipPath: "inset(100% 0% 0% 0%)",
+      //   duration: 0.5,
+      //   // delay: 0.2,
+      //   stagger: -0.5,
+      // },
       0
     )
     .fromTo(
       ".projects-projects-fg .bgs .tags",
-      { yPercent: 0, clipPath: "inset(0% 0% 0% 0%)" },
+      { autoAlpha: 1 },
       {
-        yPercent: -100,
-        clipPath: "inset(100% 0% 0% 0%)",
+        autoAlpha: -10,
         duration: 0.5,
         stagger: -0.5,
       },
@@ -617,5 +628,21 @@ onMounted(() => {
 
   window.onmousemove = onMouseMove;
   window.onpointermove = onMouseMove;
+
+  ScrollTrigger.create({
+    trigger: ".projects-projects",
+    scrub: true,
+    start: "0% 0%",
+    end: "100% 0%",
+    animation: gsap
+      .timeline()
+      .fromTo(
+        ".projects-projects aside",
+        { yPercent: -150 },
+        { yPercent: 0, duration: 1 }
+      )
+      .to(".projects-projects aside", { yPercent: 0, duration: 10 })
+      .to(".projects-projects aside", { yPercent: -150, duration: 1 }),
+  });
 });
 </script>

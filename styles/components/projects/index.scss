@@ -1,5 +1,6 @@
 .projects-projects {
   position: relative;
+  overflow: clip;
 
   &-cursor {
     transform: translate(var(--x), var(--y));
@@ -37,6 +38,124 @@
     place-content: center;
     overflow: hidden;
     transform-origin: 0% 50%;
+
+    a {
+      opacity: 0;
+      display: flex;
+      padding: 1.2rem 1rem 0.8rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: var(--Primary-Red, #e7204f);
+      color: var(--bg-color, #f5f1ee);
+      leading-trim: both;
+      text-edge: cap;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      transition: opacity 0.5s ease-in-out;
+      position: absolute;
+      left: 4.4rem;
+      bottom: 4.4rem;
+    }
+
+    .title {
+      color: #fff;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      position: absolute;
+      z-index: 2;
+      bottom: 4.4rem;
+      left: 4.4rem;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .description {
+      align-self: stretch;
+      color: #fff;
+      font-family: Nohemi;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      padding-inline: 4.4rem;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .title-shadow {
+      align-self: stretch;
+      color: var(--Grey, #e6e6e6);
+      font-family: Humane;
+      font-size: 19.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19.5rem;
+      letter-spacing: -0.2rem;
+      text-transform: uppercase;
+      white-space: pre;
+      position: absolute;
+      left: 4.4rem;
+      top: 4.4rem;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .year {
+      display: none;
+      /* color: #fff;
+      font-family: Nohemi;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: 4.4rem;
+      left: 4.4rem;
+      z-index: 2;
+      @include media("<phone") {
+        left: 1.6rem;
+      } */
+    }
+    .tags {
+      color: #fff;
+      font-family: Nohemi;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 4.4rem;
+      right: 4.4rem;
+      display: flex;
+      gap: 1.2rem;
+      z-index: 2;
+      transition: opacity 0.5s ease-in-out;
+      @include media("<phone") {
+        right: 1.6rem;
+      }
+
+      hr {
+        display: block;
+        background: #fff;
+        width: 0.1rem;
+        height: 1.9rem;
+        border: unset;
+        margin: 0;
+      }
+    }
   }
 
   figure {
@@ -53,9 +172,19 @@
     }
 
     li:hover {
+      /* z-index: 2; */
       img {
         filter: blur(2.5rem) contrast(1) brightness(0.75);
         transform: scale(1.05);
+      }
+      .title,
+      .tags {
+        opacity: 0;
+      }
+      .title-shadow,
+      .description,
+      a {
+        opacity: 1;
       }
     }
 
@@ -208,77 +337,6 @@
         left: 0rem;
       }
     }
-    .year {
-      color: #fff;
-      font-family: Nohemi;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.4rem;
-      text-transform: uppercase;
-      position: absolute;
-      top: 4.4rem;
-      left: 4.4rem;
-      z-index: 2;
-      @include media("<phone") {
-        left: 1.6rem;
-      }
-    }
-    .tags {
-      color: #fff;
-      font-family: Nohemi;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.4rem;
-      text-transform: uppercase;
-      position: absolute;
-      top: 4.4rem;
-      right: 4.4rem;
-      display: flex;
-      gap: 1.2rem;
-      z-index: 2;
-      @include media("<phone") {
-        right: 1.6rem;
-      }
-
-      hr {
-        display: block;
-        background: #fff;
-        width: 0.1rem;
-        height: 1.9rem;
-        border: unset;
-        margin: 0;
-      }
-    }
-    .title {
-      color: #fff;
-      font-family: Nohemi;
-      font-size: 2.4rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.4rem;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 2;
-    }
-    .description {
-      color: #fff;
-      text-overflow: ellipsis;
-      font-family: Nohemi;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.4rem;
-      text-transform: uppercase;
-      height: 4.8rem;
-      width: 36.4rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      position: relative;
-      z-index: 2;
-      margin-top: 0.8rem;
-    }
     a,
     img {
       display: none;
@@ -287,19 +345,46 @@
 
   aside {
     position: fixed;
-    bottom: 2rem;
+    top: 2rem;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.95rem);
     display: flex;
     padding: 1.6rem;
     align-items: flex-start;
-    gap: 4.4rem;
+    gap: 2.4rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100001;
+    align-items: center;
+    overflow: hidden;
+
+    &:hover {
+      div:nth-of-type(1) {
+        width: 10.2rem !important;
+      }
+      div:nth-of-type(2) {
+        width: 11.6rem !important;
+        padding-left: 2rem;
+      }
+      div:nth-of-type(3) {
+        width: 14.4rem !important;
+        padding-left: 2rem;
+      }
+      div {
+        width: 12.4rem !important;
+      }
+      span {
+        opacity: 1 !important;
+      }
+    }
 
     @include media("<phone") {
       display: none;
+    }
+
+    hr {
+      width: 0.1rem;
+      height: 1.3rem;
     }
 
     div {
@@ -314,16 +399,38 @@
       text-transform: uppercase;
       gap: 1.2rem;
       align-items: center;
+      /* justify-content: center; */
       cursor: pointer;
       opacity: 0.5;
+      width: 2.4rem;
+      /* overflow: hidden; */
+      transition: width 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+      padding-left: 0;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: -2rem;
+        right: -2rem;
+        top: -1.6rem;
+        bottom: -1.6rem;
+      }
       &.active {
         opacity: 1;
+      }
+      span {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
       }
     }
 
     svg {
       width: 2.4rem;
       height: 2.4rem;
+      flex-shrink: 0;
+    }
+    g {
+      stroke-opacity: 1;
     }
   }
 
@@ -435,8 +542,9 @@
         /* transition: top 0.5s ease-in-out, left 0.5s ease-in-out; */
         z-index: 3;
         &.list {
-          top: 4.4rem;
-          left: 4.4rem;
+          display: none;
+          /* top: 4.4rem;
+          left: 4.4rem; */
         }
         &.space {
           height: 10%;
@@ -461,7 +569,7 @@
         justify-content: flex-end;
         /* transition: top 0.5s ease-in-out, right 0.5s ease-in-out; */
         &.list {
-          top: 4.4rem;
+          bottom: 4.4rem;
           right: 4.4rem;
         }
         &.space {
@@ -541,7 +649,8 @@
         z-index: 2;
       }
       .description {
-        color: #fff;
+        display: none;
+        /* color: #fff;
         text-overflow: ellipsis;
         font-family: Nohemi;
         font-size: 1.6rem;
@@ -555,10 +664,11 @@
         text-overflow: ellipsis;
         position: relative;
         z-index: 2;
-        margin-top: 0.8rem;
+        margin-top: 0.8rem; */
       }
       a {
-        color: #fff;
+        display: none;
+        /* color: #fff;
         font-family: "Cutive Mono";
         font-size: 2.4rem;
         font-style: normal;
@@ -567,14 +677,13 @@
         text-transform: uppercase;
         position: absolute;
         bottom: 2.8rem;
-        /* transition: right 0.5s ease-in-out; */
         &.list {
           right: 0rem;
         }
 
         &.year {
           right: 2.9rem;
-        }
+        } */
       }
     }
 
