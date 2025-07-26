@@ -2,7 +2,7 @@
   background: var(--Primary-Red, #e7204f);
   height: 100vh;
   position: relative;
-  z-index: 200;
+  /* z-index: 200; */
   @include media("<phone") {
     height: auto;
   }

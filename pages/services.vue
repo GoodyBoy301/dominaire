@@ -4,4 +4,5 @@
     <ServicesStack />
     <ServicesApproach />
   </main>
+  <Footer></Footer>
 </template>

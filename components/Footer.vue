@@ -150,6 +150,8 @@ const h3 = ref(1);
 const h4 = ref(1);
 const h5 = ref(1);
 
+const router = useRouter();
+
 function MouseMove(e: MouseEvent, index: number) {
   if (index === 1) {
     x1.value = e.offsetX / w1.value - 0.5;
@@ -223,7 +225,7 @@ onMounted(() => {
 
   if (innerWidth < 768) return;
 
-  gsap
+  const tl = gsap
     .timeline({
       defaults: {
         ease: "none",
@@ -242,5 +244,8 @@ onMounted(() => {
       { xPercent: -100 },
       { xPercent: 0, duration: 0.125, delay: 0.2 }
     );
+  watch(router.currentRoute, () => {
+    tl.scrollTrigger?.refresh();
+  });
 });
 </script>

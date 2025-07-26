@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{ active: isMenuOpen }">
-    <NuxtLink class="header-logo"> Dominaire Agency </NuxtLink>
+    <NuxtLink href="/" class="header-logo"> Dominaire Agency </NuxtLink>
     <button class="header-hamburger" @click="isMenuOpen = !isMenuOpen">
       <span data-menu>
         <i>M</i>
@@ -48,6 +48,8 @@
 <script setup lang="ts">
 const isMenuOpen = ref(false);
 import gsap from "gsap";
+
+const router = useRouter();
 
 onMounted(() => {
   const tl = gsap
@@ -139,6 +141,10 @@ onMounted(() => {
     } else {
       tl.reverse();
     }
+  });
+
+  watch(router.currentRoute, () => {
+    isMenuOpen.value = false;
   });
 });
 </script>

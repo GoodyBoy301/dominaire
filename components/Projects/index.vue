@@ -629,20 +629,20 @@ onMounted(() => {
   window.onmousemove = onMouseMove;
   window.onpointermove = onMouseMove;
 
-  ScrollTrigger.create({
-    trigger: ".projects-projects",
-    scrub: true,
-    start: "0% 0%",
-    end: "100% 0%",
-    animation: gsap
-      .timeline()
-      .fromTo(
-        ".projects-projects aside",
-        { yPercent: -150 },
-        { yPercent: 0, duration: 1 }
-      )
-      .to(".projects-projects aside", { yPercent: 0, duration: 10 })
-      .to(".projects-projects aside", { yPercent: -150, duration: 1 }),
-  });
+  // ScrollTrigger.create({
+  //   trigger: ".projects-projects",
+  //   scrub: true,
+  //   start: "0% 100%",
+  //   end: "100% 100%",
+  //   animation: gsap
+  //     .timeline()
+  //     .fromTo(
+  //       ".projects-projects aside",
+  //       { yPercent: 150 },
+  //       { yPercent: 0, duration: 1 }
+  //     )
+  //     .to(".projects-projects aside", { yPercent: 0, duration: 10 })
+  //     .to(".projects-projects aside", { yPercent: 150, duration: 1 }),
+  // });
 });
 </script>

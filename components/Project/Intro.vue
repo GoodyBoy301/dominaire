@@ -36,6 +36,51 @@
       <li>
         <img src="/images/project-002.webp" alt="" />
       </li>
+      <li>
+        <img src="/images/project-001.webp" alt="" />
+      </li>
+      <li>
+        <img src="/images/project-002.webp" alt="" />
+      </li>
+      <li>
+        <img src="/images/project-001.webp" alt="" />
+      </li>
+      <li>
+        <img src="/images/project-002.webp" alt="" />
+      </li>
     </ul>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap/src/all";
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const firstElBounds = document
+    .querySelector(".project-intro li:first-of-type")
+    ?.getBoundingClientRect();
+  const lastElBounds = document
+    .querySelector(".project-intro li:last-of-type")
+    ?.getBoundingClientRect();
+
+  ScrollTrigger.create({
+    trigger: ".project-intro",
+    start: "100% 100%",
+    end: "200% 100%",
+    pin: true,
+    scrub: true,
+    animation: gsap.timeline().to(".project-intro li", {
+      x:
+        ((lastElBounds?.x || 1) -
+          innerWidth +
+          (lastElBounds?.width || 0) +
+          (firstElBounds?.x || 0)) *
+        -1,
+      ease: "none",
+    }),
+  });
+});
+</script>

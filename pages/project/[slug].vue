@@ -6,4 +6,5 @@
     <ProjectShots />
     <ProjectConclusion />
   </main>
+  <Footer></Footer>
 </template>

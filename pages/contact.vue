@@ -7,4 +7,5 @@
     <!-- <Works /> -->
     <!-- <Testimonials /> -->
   </main>
+  <Footer></Footer>
 </template>
