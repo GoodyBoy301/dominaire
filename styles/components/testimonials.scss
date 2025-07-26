@@ -1,5 +1,6 @@
 .testimonials {
   height: calc(100vh);
+  /* padding-bottom: 8rem; */
   position: relative;
   background-color: #f5f1ee;
 
@@ -150,6 +151,15 @@
         aside {
           filter: grayscale(0);
         }
+      }
+
+      &:nth-of-type(2) aside,
+      &:nth-of-type(3n - 1) aside {
+        background-color: #4c288d;
+      }
+      &:nth-of-type(3) aside,
+      &:nth-of-type(3n) aside {
+        background-color: #ff5200;
       }
     }
 
