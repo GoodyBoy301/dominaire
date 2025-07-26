@@ -55,7 +55,7 @@
       }
     }
 
-    &:focus + * {
+    &:hover + * {
       margin-top: 0;
     }
   }

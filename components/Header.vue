@@ -33,12 +33,12 @@
       </NuxtLink>
       <div class="header-menu-contact">
         <div>
-          <a href="">x(twitter)</a>
-          <a href="">dribbble</a>
-          <a href="">awwwards</a>
-          <a href="">linkedin</a>
-          <a href="">instagram</a>
-          <h6>Reach out to us</h6>
+          <a href="" class="social">x(twitter)</a>
+          <a href="" class="social">dribbble</a>
+          <a href="" class="social">awwwards</a>
+          <a href="" class="social">linkedin</a>
+          <a href="" class="social">instagram</a>
+          <NuxtLink href="/contact" class="link">Reach out to us</NuxtLink>
         </div>
       </div>
     </div>
