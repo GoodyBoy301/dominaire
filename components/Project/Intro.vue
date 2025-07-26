@@ -53,11 +53,39 @@
 </template>
 
 <script setup lang="ts">
+import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap/src/all";
 
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  new SplitText(".project-intro h3, .project-intro p", {
+    type: "lines,words",
+    autoSplit: true,
+    charsClass: "char",
+    wordsClass: "word",
+    onSplit: () =>
+      ScrollTrigger.create({
+        trigger: ".project-intro",
+        start: "0% 100%",
+        end: "100% 100%",
+        scrub: true,
+        animation: gsap.timeline().fromTo(
+          ".project-intro h3 .word, .project-intro p .word",
+          {
+            yPercent: 100,
+            opacity: 0,
+          },
+          {
+            yPercent: 0,
+            opacity: 1,
+            stagger: { amount: 2 },
+            ease: "none",
+          }
+        ),
+      }),
+  });
 
   const firstElBounds = document
     .querySelector(".project-intro li:first-of-type")

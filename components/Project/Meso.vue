@@ -25,3 +25,40 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap/src/all";
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  new SplitText(".project-meso h3, .project-meso p", {
+    type: "lines,words",
+    autoSplit: true,
+    charsClass: "char",
+    wordsClass: "word",
+    onSplit: () =>
+      ScrollTrigger.create({
+        trigger: ".project-meso",
+        start: "0% 100%",
+        end: "100% 100%",
+        scrub: true,
+        animation: gsap.timeline().fromTo(
+          ".project-meso h3 .word, .project-meso p .word",
+          {
+            yPercent: 100,
+            opacity: 0,
+          },
+          {
+            yPercent: 0,
+            opacity: 1,
+            stagger: { amount: 2 },
+            ease: "none",
+          }
+        ),
+      }),
+  });
+});
+</script>
