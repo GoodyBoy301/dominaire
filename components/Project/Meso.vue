@@ -42,7 +42,7 @@ onMounted(() => {
     onSplit: () =>
       ScrollTrigger.create({
         trigger: ".project-meso",
-        start: "0% 100%",
+        start: "25% 100%",
         end: "100% 100%",
         scrub: true,
         animation: gsap.timeline().fromTo(
