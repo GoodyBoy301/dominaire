@@ -54,7 +54,7 @@ onMounted(() => {
       ScrollTrigger.create({
         trigger: ".project-shots",
         start: "0% 100%",
-        end: "100% 100%",
+        end: "35% 100%",
         scrub: true,
         animation: gsap.timeline().fromTo(
           ".project-shots h4 .word, .project-shots h3 .word",
