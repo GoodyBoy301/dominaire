@@ -1,20 +1,13 @@
 <template>
   <header class="header" :class="{ active: isMenuOpen }">
     <NuxtLink href="/" class="header-logo"> Dominaire Agency </NuxtLink>
-    <button class="header-hamburger" @click="isMenuOpen = !isMenuOpen">
-      <span data-menu>
-        <i>M</i>
-        <i>E</i>
-        <i>N</i>
-        <i>U</i>
-      </span>
-      <span data-close>
-        <i>C</i>
-        <i>L</i>
-        <i>O</i>
-        <i>S</i>
-        <i>E</i>
-      </span>
+    <button
+      class="header-hamburger"
+      :class="{ active: isMenuOpen }"
+      @click="isMenuOpen = !isMenuOpen"
+    >
+      {{ !isMenuOpen ? "MENU" : "CLOSE" }}
+      <SvgoX data-mobile />
     </button>
     <div class="header-menu">
       <NuxtLink href="/">
@@ -31,7 +24,11 @@
         <aside />
         <span> Projects </span>
       </NuxtLink>
-      <div class="header-menu-contact">
+      <NuxtLink href="/contact" data-mobile>
+        <aside />
+        <span> Contact Us </span>
+      </NuxtLink>
+      <div class="header-menu-contact" data-desktop>
         <div>
           <a href="" class="social">x(twitter)</a>
           <a href="" class="social">dribbble</a>
@@ -57,9 +54,8 @@ onMounted(() => {
     .to(
       ".header-hamburger",
       {
-        backgroundColor: "#F5F1EE",
-        width: "32.8rem",
-        right: "3.8rem",
+        width: innerWidth < 768 ? "100vw" : "32.8rem",
+        right: innerWidth < 768 ? "0rem" : "3.8rem",
         duration: 0.3,
       },
       0.1
@@ -91,46 +87,30 @@ onMounted(() => {
       {
         autoAlpha: 1,
         yPercent: 0,
-        duration: 0.2,
+        duration: 0.5,
         ease: "power1.out",
-        stagger: 0.025,
+        stagger: 0.1,
       },
       0
     )
     .fromTo(
       ".header-hamburger",
-      { background: "#F5F1EE00" },
-      { background: "#F5F1EE", duration: 0.2, stagger: { amount: 0.07 } },
-      0
-    )
-    .fromTo(
-      ".header-hamburger [data-menu] i",
-      { rotateX: "0deg" },
-      { rotateX: "90deg", duration: 0.2, stagger: { amount: 0.07 } },
-      0
-    )
-    .fromTo(
-      ".header-hamburger [data-menu]",
-      { scale: 1, opacity: 1 },
-      { scale: 0.7, opacity: 0, duration: 0.2 },
-      0
-    )
-    .fromTo(
-      ".header-hamburger [data-close] i",
-      { rotateX: "-90deg", y: 0 },
       {
-        rotateX: "0deg",
-        y: "-4.2rem",
-        duration: 0.2,
-        stagger: { amount: 0.1 },
+        background: "#F5F1EE00",
+        color: "#F5F1EE",
+        fontSize: "1.8rem",
+        fontWeight: 800,
+        borderColor: "#0000",
       },
-      0.1
-    )
-    .fromTo(
-      ".header-hamburger [data-close]",
-      { scale: 0.5, opacity: 0 },
-      { scale: 1, opacity: 2, duration: 0.2 },
-      0.1
+      {
+        background: "#F5F1EE",
+        fontSize: "2.4rem",
+        fontWeight: 400,
+        borderColor: "#000",
+        color: "#000000",
+        duration: 0.5,
+      },
+      0
     );
 
   tl.pause(0);

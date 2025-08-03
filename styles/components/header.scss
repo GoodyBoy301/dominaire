@@ -16,6 +16,9 @@
   }
   @include media("<phone") {
     padding: 2rem 2.4rem;
+    &.active .header-menu {
+      top: 7.2rem !important;
+    }
   }
 
   &-logo {
@@ -49,11 +52,32 @@
     padding-top: 1rem;
     overflow: hidden;
     z-index: 10;
+    border: 0.1rem solid #000;
+
     @include media("<phone") {
       font-size: 1.6rem;
       right: 1.6rem;
-      width: 6.4rem;
+      width: 8.6rem;
       height: 3.2rem;
+      background: #000 !important;
+      color: var(--Shade-White, #fff) !important;
+      padding-top: 1rem;
+      transition: padding 0.5s ease-in-out;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 1.6rem;
+
+      &.active {
+        padding-top: 0.5rem;
+      }
+
+      svg {
+        margin: 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        position: relative;
+        top: -0.6rem;
+      }
     }
 
     span:nth-of-type(1) {
@@ -95,6 +119,9 @@
     visibility: hidden;
     opacity: 0;
     justify-content: space-evenly;
+    @include media("<phone") {
+      top: 7.2rem !important;
+    }
 
     & > a {
       display: inline-flex;
@@ -130,8 +157,11 @@
         content: unset;
       }
       @include media("<phone") {
-        font-size: 10vh;
-        padding: 0vh 3rem 2vh;
+        font-size: 10rem;
+        line-height: 20rem;
+        padding: 0;
+        padding-left: 1.6rem;
+        padding-top: 1.6rem;
       }
       &.router-link-exact-active {
         color: #e7204f;
@@ -139,30 +169,7 @@
       &:hover {
         color: #e7204f88;
       }
-      /* &:hover {
-        height: 50vh;
-        @include media("<phone") {
-          height: 20vh;
-        }
-        span {
-          transform: scale(1.75) translateY(-20%);
-          @include media("<phone") {
-            transform: scale(1.5);
-          }
-        }
-      } */
     }
-
-    /* aside {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #e7204f;
-      @include media("<phone") {
-      }
-    } */
 
     span {
       transform-origin: 0% 0%;
