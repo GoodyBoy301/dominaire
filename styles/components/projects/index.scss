@@ -1,3 +1,9 @@
+.app:has(.projects-hero:hover) .projects-projects-cursor,
+.app:has(.header:hover) .projects-projects-cursor,
+.app:has(.footer:hover) .projects-projects-cursor {
+  visibility: hidden;
+}
+
 .projects-projects {
   position: relative;
   overflow: clip;
@@ -30,6 +36,7 @@
       gap: 0.7rem;
       font-size: 1.6rem;
       letter-spacing: -0.015rem;
+      display: none;
     }
   }
 
@@ -75,6 +82,10 @@
       bottom: 4.4rem;
       left: 4.4rem;
       transition: opacity 0.5s ease-in-out;
+      @include media("<phone") {
+        bottom: 4.8rem;
+        left: 1.6rem;
+      }
     }
     .description {
       align-self: stretch;
@@ -113,20 +124,6 @@
 
     .year {
       display: none;
-      /* color: #fff;
-      font-family: Nohemi;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.4rem;
-      text-transform: uppercase;
-      position: absolute;
-      top: 4.4rem;
-      left: 4.4rem;
-      z-index: 2;
-      @include media("<phone") {
-        left: 1.6rem;
-      } */
     }
     .tags {
       color: #fff;
@@ -144,7 +141,9 @@
       z-index: 2;
       transition: opacity 0.5s ease-in-out;
       @include media("<phone") {
-        right: 1.6rem;
+        bottom: 1.6rem;
+        left: 1.6rem;
+        right: unset;
       }
 
       hr {
@@ -176,6 +175,9 @@
       img {
         filter: blur(2.5rem) contrast(1) brightness(0.75);
         transform: scale(1.05);
+        @include media("<phone") {
+          filter: unset;
+        }
       }
       .title,
       .tags {
@@ -185,6 +187,9 @@
       .description,
       a {
         opacity: 1;
+        @include media("<phone") {
+          opacity: 0;
+        }
       }
     }
 

@@ -3,7 +3,21 @@
     <div class="projects-hero-header">
       <h1>projects</h1>
       <figure data-desktop>
-        <img src="/images/works-002-cover.webp" alt="" />
+        <video
+          playsinline
+          alt=""
+          poster="/images/hero-shadow.webp"
+          ref="video"
+          autoplay="true"
+          loop
+          :class="{ playing: true }"
+          :muted="true"
+        >
+          <source
+            src="https://res.cloudinary.com/dllm7gfit/video/upload/v1750263487/Comp_5_lhaojm.mp4?t=6.01"
+            type="video/mp4"
+          />
+        </video>
       </figure>
       <p>
         Featured projects that have been meticulously crafted with passion to
