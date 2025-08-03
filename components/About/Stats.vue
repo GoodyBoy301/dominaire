@@ -8,20 +8,16 @@
     </h2>
     <ul class="about-stats-list">
       <li>
-        <h3>2024</h3>
-        <h5>started</h5>
+        <p>Location</p>
+        <p>London</p>
       </li>
       <li>
-        <h4>100</h4>
-        <p>clients</p>
+        <p>Started</p>
+        <p>2025</p>
       </li>
       <li>
-        <h4>001</h4>
         <p>team members</p>
-      </li>
-      <li>
-        <h4>london</h4>
-        <p>country</p>
+        <p>005</p>
       </li>
     </ul>
   </section>
@@ -30,9 +26,10 @@
 <script setup lang="ts">
 import { ScrollTrigger } from "gsap/src/all";
 import gsap from "gsap/src/all";
+import SplitText from "gsap/src/SplitText";
 
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
   if (innerWidth >= 768) {
     gsap
       .timeline({
@@ -50,7 +47,7 @@ onMounted(() => {
           width: "136rem",
         },
         {
-          width: "32rem",
+          width: "43.3rem",
           stagger: 0.45,
           ease: "none",
         }
@@ -77,5 +74,26 @@ onMounted(() => {
         }
       );
   }
+
+  new SplitText(".about-stats-heading", {
+    type: "words,chars",
+    charsClass: "char",
+  });
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".about-stats",
+        scrub: true,
+        start: "0% 100%",
+        end: "0% 40%",
+      },
+    })
+    .fromTo(
+      ".about-stats-heading .char",
+      { color: "#fff4" },
+      { color: "#F5F1EE", duration: 0.1, delay: 0.5, stagger: { amount: 1 } },
+      0
+    );
 });
 </script>

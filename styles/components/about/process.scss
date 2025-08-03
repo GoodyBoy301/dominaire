@@ -1,6 +1,6 @@
 .about-process {
   background: #f5f1ee;
-  padding: 10rem 0;
+  padding: 10rem 8rem;
   @include media("<phone") {
     padding: 3.6rem 0 3.2rem;
   }
@@ -8,7 +8,8 @@
   &-heading {
     display: flex;
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 0;
+    align-items: center;
     @include media("<phone") {
       flex-direction: column;
       padding: 0 1.6rem;
@@ -24,15 +25,16 @@
       text-transform: uppercase;
     }
     p {
+      width: 46.2rem;
       color: #000;
       font-family: Nohemi;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-style: normal;
       font-weight: 500;
       line-height: 3.2rem;
+      letter-spacing: 0.032rem;
       text-transform: uppercase;
-      max-width: 50.2rem;
-      margin-top: 1.2rem;
+      padding-bottom: 2rem;
       @include media("<phone") {
         font-size: 1.6rem;
         line-height: 2.8rem;
@@ -42,65 +44,66 @@
 
   &-list {
     margin-top: 14.8rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 23.7rem);
     width: max-content;
     @include media("<phone") {
       margin-top: 4.9rem;
     }
 
-    li:first-of-type {
-      margin-left: 10rem;
-      @include media("<phone") {
-        margin-left: 1.6rem;
-      }
+    li:nth-of-type(1) {
+      background-color: #e7204f;
     }
-    li:last-of-type {
-      padding-right: 0rem;
-      margin-right: 10rem;
-      @include media("<phone") {
-        margin-right: 1.6rem;
-      }
+    li:nth-of-type(2) {
+      background-color: #000000;
+    }
+    li:nth-of-type(3) {
+      background-color: #d13b00;
+    }
+    li:nth-of-type(4) {
+      background-color: #08627c;
     }
 
     li {
-      flex: 1;
-      width: 60rem;
+      display: flex;
+      width: 57rem;
+      height: 59.2rem;
+      padding: 3.2rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.8rem;
       flex-shrink: 0;
-      padding-right: 10rem;
-      border-top: 0.1rem solid #000;
-      padding-top: 4.7rem;
+      align-self: stretch;
+      background: #d13b00;
       @include media("<phone") {
         width: 35rem;
         padding-right: 4.8rem;
       }
     }
 
-    h4 {
-      color: #000;
-      /* font-family: Thunder; */
-      font-family: Nohemi;
-      /* font-size: 5rem; */
-      font-size: 4rem;
-      font-style: normal;
-      /* font-weight: 700; */
-      font-weight: 600;
-      line-height: 5rem;
-      text-transform: uppercase;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    hr {
+      width: 100%;
+      opacity: 0.5;
+      border-color: #ffffff;
+      border-bottom: transparent;
+      border-left: transparent;
+      border-right: transparent;
+      margin: 1.8rem 0;
     }
 
     h3 {
-      color: var(--Black, #000);
+      color: #fff;
       font-family: Humane;
       font-size: 10rem;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 10rem;
       text-transform: uppercase;
-      margin-top: 1.4rem;
-      @include media("<phone") {
-        font-size: 8rem;
-        line-height: 8rem;
-      }
       @include media("<phone") {
         font-size: 8rem;
         line-height: 8rem;
@@ -108,14 +111,15 @@
     }
 
     p {
-      color: #000;
+      align-self: stretch;
+      color: #fff;
       font-family: Nohemi;
-      font-size: 2.4rem;
+      font-size: 1.6rem;
       font-style: normal;
       font-weight: 400;
       line-height: 3.2rem;
       text-transform: uppercase;
-      margin-top: 3.2rem;
+      opacity: 0.8;
       @include media("<phone") {
         font-size: 2rem;
         line-height: 2.4rem;

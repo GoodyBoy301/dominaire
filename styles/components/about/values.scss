@@ -1,12 +1,12 @@
 .about-values {
-  background: var(--brand-main, #17181b);
+  background-color: #000000;
   padding: 10rem 0;
   @include media("<phone") {
     padding: 3.6rem 0 3.2rem;
   }
 
   &-heading {
-    padding: 0 10rem;
+    padding: 0 8rem;
     color: var(--bg-color, #f5f1ee);
     font-family: Humane;
     font-size: 20rem;
@@ -20,7 +20,7 @@
   }
 
   &-list {
-    margin-top: 14.8rem;
+    margin-top: 4.7rem;
     display: flex;
     width: max-content;
     @include media("<phone") {
@@ -28,14 +28,14 @@
     }
 
     li:first-of-type {
-      margin-left: 10rem;
+      margin-left: 8rem;
       @include media("<phone") {
         margin-left: 1.6rem;
       }
     }
     li:last-of-type {
       padding-right: 0rem;
-      margin-right: 10rem;
+      margin-right: 8rem;
       @include media("<phone") {
         margin-right: 1.6rem;
       }
@@ -43,10 +43,10 @@
 
     li {
       flex: 1;
-      width: 60rem;
+      width: 67.3rem;
       flex-shrink: 0;
-      padding-right: 10rem;
-      border-top: 0.1rem solid rgba(245, 241, 238, 0.32);
+      padding-right: 16.5rem;
+      /* border-top: 0.1rem solid rgba(245, 241, 238, 0.32); */
       padding-top: 4.7rem;
       @include media("<phone") {
         width: 35rem;
@@ -56,12 +56,9 @@
 
     h4 {
       color: var(--bg-color, #f5f1ee);
-      /* font-family: Thunder; */
       font-family: Nohemi;
-      /* font-size: 5rem; */
       font-size: 4rem;
       font-style: normal;
-      /* font-weight: 700; */
       font-weight: 600;
       line-height: 5rem;
       text-transform: uppercase;
@@ -100,5 +97,23 @@
         line-height: 2.4rem;
       }
     }
+  }
+
+  &-track {
+    width: 121.2rem;
+    height: 0.1rem;
+    background: rgba(245, 241, 238, 0.32);
+    position: absolute;
+    top: 32.8rem;
+    left: 8rem;
+  }
+
+  &-tracker {
+    width: 37.3rem;
+    height: 0.1rem;
+    background: #f5f1ee;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
   }
 }

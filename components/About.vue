@@ -31,41 +31,6 @@
         <i :class="{ inactive: !isPlaying }"></i>
         {{ isPlaying ? "Stop Reel" : "Play Reel" }}
       </span>
-      <!-- <div class="about-media-controls" v-if="currentTime > 0.01">
-        <div
-          class="pauseplay"
-          @click="(e:Event) => {e.stopPropagation(); isPlaying = !isPlaying}"
-        >
-          <SvgoPlay v-if="!isPlaying" />
-          <SvgoPause v-else />
-        </div>
-        <div class="time">
-          {{ formatTime(currentTime) }} / {{ formatTime(totalTime) }}
-        </div>
-        <div class="duration">
-          <div
-            class="track"
-            @mousedown="onMouseDown"
-            @pointerdown="onMouseDown"
-            @mouseup="onMouseUp"
-            @pointerup="onMouseUp"
-            @mousemove="onSeek"
-            @pointermove="onSeek"
-          >
-            <div
-              class="current"
-              :style="{ '--width': `${(currentTime / totalTime) * 100}%` }"
-            ></div>
-          </div>
-        </div>
-        <div
-          class="mute"
-          @click="(e:Event) => {e.stopPropagation(); isMuted = !isMuted}"
-        >
-          <SvgoUnmuted v-if="!isMuted" />
-          <SvgoMuted v-else />
-        </div>
-      </div> -->
     </figure>
     <div class="about-us">
       <hr />
@@ -84,7 +49,6 @@
 <script setup lang="ts">
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
-import { formatTime } from "~/utils/time";
 
 const isPlaying = ref(true);
 const isMuted = ref(true);
@@ -120,24 +84,8 @@ function onMouseMove(e: MouseEvent) {
   y.value = e.clientY;
 }
 
-function onMouseDown(e: MouseEvent) {
-  isSeeking.value = true;
-  const target = e.target as HTMLElement;
-  video.value.currentTime =
-    (e.offsetX / target.clientWidth) * video.value.duration;
-  x.value = e.offsetX;
-}
 function onMouseUp() {
   isSeeking.value = false;
-}
-
-function onSeek(e: MouseEvent) {
-  if (!isNaN(e.offsetX) && isSeeking.value) {
-    const target = e.target as HTMLElement;
-    video.value.currentTime =
-      (e.offsetX / target.clientWidth) * video.value.duration;
-    x.value = e.offsetX;
-  }
 }
 
 const updateTime = () => {

@@ -9,10 +9,10 @@
         brings.
       </p>
     </div>
-    <div class="about-vision-deco">
+    <!-- <div class="about-vision-deco">
       <SvgoVision />
       <SvgoVision />
       <SvgoVision />
-    </div>
+    </div> -->
   </section>
 </template>

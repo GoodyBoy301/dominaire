@@ -25,7 +25,7 @@
         <span> Services </span>
       </NuxtLink>
       <NuxtLink href="/about">
-        <span> Studio </span>
+        <span> About Us </span>
       </NuxtLink>
       <NuxtLink href="/projects">
         <aside />

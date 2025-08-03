@@ -1,6 +1,9 @@
 <template>
   <section class="about-values">
     <h2 class="about-values-heading">Our values</h2>
+    <div class="about-values-track">
+      <div class="about-values-tracker"></div>
+    </div>
     <ul class="about-values-list">
       <li>
         <h4>01</h4>
@@ -68,9 +71,21 @@ onMounted(() => {
         x: "0",
       },
       {
-        x: innerWidth < 768 ? "-139rem" : "-176rem",
+        x: innerWidth < 768 ? "-139rem" : "-215rem",
         ease: "none",
-      }
+      },
+      0
+    )
+    .fromTo(
+      ".about-values-tracker",
+      {
+        x: "0",
+      },
+      {
+        x: "83.7rem",
+        ease: "none",
+      },
+      0
     );
 });
 </script>

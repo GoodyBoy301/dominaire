@@ -1,135 +1,71 @@
 .about-stats {
-  padding: 8rem 8rem 6.8rem;
+  padding: 16rem 8rem 3.3rem;
   @include media("<phone") {
     padding: 8rem 1.6rem 8.1rem;
   }
 
   &-heading {
+    width: 76.7rem;
     color: #fff;
     font-family: Nohemi;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 500;
     line-height: 5.2rem;
     text-transform: uppercase;
-    max-width: 87.5rem;
+    margin: auto;
+    padding-bottom: 16rem;
+    color: var(--bg-color, rgba(255, 255, 255, 0.5));
     @include media("<phone") {
       font-size: 1.6rem;
       line-height: 3.2rem;
-    }
-
-    h1 {
-      color: var(--Primary-Red, #e7204f);
-      font-family: Humane;
-      font-size: 25rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 25rem;
-      text-transform: uppercase;
-      flex-shrink: 0;
-      @include media("<phone") {
-        font-size: 15rem;
-        line-height: 15rem;
-        text-transform: uppercase;
-      }
-    }
-
-    p {
-      color: var(--bg-color, #f5f1ee);
-      font-family: Nohemi;
-      font-size: 2.4rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 4.4rem;
-      text-transform: uppercase;
-      padding-bottom: 2.4rem;
-      @include media("<phone") {
-        font-size: 1.6rem;
-        line-height: 3.2rem;
-        padding: 0;
-      }
     }
   }
 
   &-list {
     width: 129.2rem;
-    height: 29.2rem;
+    height: 6.4rem;
     margin-top: 4.7rem;
     display: flex;
+    gap: 1.5rem;
     @include media("<phone") {
     }
 
     li {
-      width: 32.4rem;
-      height: 29.2rem;
-      display: grid;
-      place-content: center;
-      text-align: center;
+      width: 43.3rem;
+      height: 6.4rem;
+      display: flex;
+      padding: 1.6rem 2.4rem;
+      align-items: center;
+      gap: 10rem;
+      justify-content: space-between;
       flex-shrink: 0;
     }
 
     li:nth-of-type(1) {
-      background: #ff5200;
+      background: #e7204f;
     }
     li:nth-of-type(2) {
-      background: #4c288d;
-    }
-    li:nth-of-type(3) {
       background: #e7fde7;
       * {
-        color: #043840;
+        color: #000000;
       }
     }
-    li:nth-of-type(4) {
-      background: #08627c;
-    }
-
-    h3 {
-      color: #fff;
-      leading-trim: both;
-      text-edge: cap;
-      font-family: Humane;
-      font-size: 20rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 18rem;
-      text-transform: uppercase;
-    }
-
-    h4 {
-      color: #e7fde7;
-      font-family: Humane;
-      font-size: 15rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 15rem;
-      text-transform: uppercase;
-    }
-
-    h5 {
-      leading-trim: both;
-      text-edge: cap;
-      -webkit-text-stroke-width: 0.1rem;
-      -webkit-text-stroke-color: #e7fde7;
-      font-family: Nohemi;
-      font-size: 4.4rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 4.4rem;
-      text-transform: uppercase;
-      color: transparent;
+    li:nth-of-type(3) {
+      background: #f5f1ee;
+      * {
+        color: #000000;
+      }
     }
 
     p {
       color: #fff;
-      text-align: center;
       font-family: Nohemi;
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-style: normal;
       font-weight: 400;
       line-height: 3.2rem;
       text-transform: uppercase;
-      margin-top: 1.6rem;
     }
   }
 }
