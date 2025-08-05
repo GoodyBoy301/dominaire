@@ -100,7 +100,6 @@ import { ScrollTrigger } from "gsap/src/all";
 import gsap from "gsap/src/all";
 
 onMounted(() => {
-  // if (innerWidth >= 768) return;
   gsap.registerPlugin(ScrollTrigger);
 
   gsap

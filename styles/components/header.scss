@@ -16,6 +16,7 @@
   }
   @include media("<phone") {
     padding: 2rem 2.4rem;
+    top: 0rem !important;
     &.active .header-menu {
       top: 7.2rem !important;
     }

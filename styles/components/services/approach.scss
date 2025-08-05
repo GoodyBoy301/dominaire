@@ -5,7 +5,6 @@
   overflow: hidden;
   @include media("<phone") {
     padding: 8rem 1.6rem 8.1rem;
-    opacity: 0;
   }
 
   .tags {
@@ -27,6 +26,10 @@
       line-height: 9rem;
       text-transform: uppercase;
       width: 34rem;
+      @include media("<phone") {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+      }
     }
 
     h5 {
@@ -70,6 +73,9 @@
       height: 100vh;
       padding: 9.9rem 8.6rem;
       position: relative;
+      @include media("<phone") {
+        padding: 0;
+      }
     }
 
     h3 {
@@ -82,6 +88,10 @@
       text-transform: uppercase;
       position: relative;
       z-index: 1;
+      @include media("<phone") {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+      }
     }
 
     p {
