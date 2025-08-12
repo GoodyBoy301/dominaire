@@ -3,6 +3,7 @@
     <ServicesHero />
     <ServicesStack />
     <ServicesApproach />
+    <ServicesIndustries />
   </main>
   <Footer></Footer>
 </template>

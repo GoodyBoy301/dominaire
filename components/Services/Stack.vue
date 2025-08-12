@@ -1,96 +1,104 @@
 <template>
   <section class="services-stack">
     <ul class="services-stack-list">
-      <li>
-        <h3>branding</h3>
-        <p>
-          We create a unique identity for your brand, helping to set you apart
-          from the competition.
-        </p>
-        <div class="tags">
-          <i>illustrations</i>
-          <i>brand guidelines</i>
-          <i>art direction</i>
-          <i>brand assets</i>
-          <i>Logos</i>
-          <i>illustrator</i>
-          <i>after effects</i>
-          <i>figma</i>
-        </div>
-        <div class="medias">
-          <figure>
-            <img src="/images/works-001.webp" alt="" />
-          </figure>
-          <figure>
-            <img src="/images/works-001-cover.webp" alt="" />
-          </figure>
-        </div>
-      </li>
-      <li>
-        <h3>Web Development</h3>
-        <p>
-          We create a unique identity for your brand, helping to set you apart
-          from the competition.
-        </p>
-        <div class="tags">
-          <i>Blogs</i>
-          <i>E-commerce</i>
-          <i>Corporate site</i>
-        </div>
-        <div class="medias">
-          <figure>
-            <img src="/images/works-002.webp" alt="" />
-          </figure>
-          <figure>
-            <img src="/images/works-002-cover.webp" alt="" />
-          </figure>
-        </div>
-      </li>
-      <li>
-        <h3>Web Design</h3>
-        <p>
-          We create a unique identity for your brand, helping to set you apart
-          from the competition.
-        </p>
-        <div class="tags">
-          <i>illustrations</i>
-          <i>brand guidelines</i>
-          <i>art direction</i>
-          <i>brand assets</i>
-          <i>Logos</i>
-          <i>illustrator</i>
-          <i>after effects</i>
-          <i>figma</i>
-        </div>
-        <div class="medias">
-          <figure>
-            <img src="/images/works-003.webp" alt="" />
-          </figure>
-          <figure>
-            <img src="/images/works-003-cover.webp" alt="" />
-          </figure>
-        </div>
-      </li>
-      <li>
-        <h3>SEO</h3>
-        <p>
-          We create a unique identity for your brand, helping to set you apart
-          from the competition.
-        </p>
-        <div class="tags">
-          <i>Blogs</i>
-          <i>E-commerce</i>
-          <i>Corporate site</i>
-        </div>
-        <div class="medias">
-          <figure>
-            <img src="/images/works-004.webp" alt="" />
-          </figure>
-          <figure>
-            <img src="/images/works-004-cover.webp" alt="" />
-          </figure>
-        </div>
-      </li>
+      <div class="notlast">
+        <li>
+          <h3>branding</h3>
+          <p>
+            We create a unique identity for your brand, helping to set you apart
+            from the competition.
+          </p>
+          <div class="tags">
+            <i>illustrations</i>
+            <i>brand guidelines</i>
+            <i>art direction</i>
+            <i>brand assets</i>
+            <i>Logos</i>
+            <i>illustrator</i>
+            <i>after effects</i>
+            <i>figma</i>
+          </div>
+          <div class="medias">
+            <figure>
+              <img src="/images/works-001.webp" alt="" />
+            </figure>
+            <figure>
+              <img src="/images/works-001-cover.webp" alt="" />
+            </figure>
+          </div>
+        </li>
+      </div>
+      <div class="notlast">
+        <li>
+          <h3>Web Development</h3>
+          <p>
+            We create a unique identity for your brand, helping to set you apart
+            from the competition.
+          </p>
+          <div class="tags">
+            <i>Blogs</i>
+            <i>E-commerce</i>
+            <i>Corporate site</i>
+          </div>
+          <div class="medias">
+            <figure>
+              <img src="/images/works-002.webp" alt="" />
+            </figure>
+            <figure>
+              <img src="/images/works-002-cover.webp" alt="" />
+            </figure>
+          </div>
+        </li>
+      </div>
+      <div class="notlast">
+        <li>
+          <h3>Web Design</h3>
+          <p>
+            We create a unique identity for your brand, helping to set you apart
+            from the competition.
+          </p>
+          <div class="tags">
+            <i>illustrations</i>
+            <i>brand guidelines</i>
+            <i>art direction</i>
+            <i>brand assets</i>
+            <i>Logos</i>
+            <i>illustrator</i>
+            <i>after effects</i>
+            <i>figma</i>
+          </div>
+          <div class="medias">
+            <figure>
+              <img src="/images/works-003.webp" alt="" />
+            </figure>
+            <figure>
+              <img src="/images/works-003-cover.webp" alt="" />
+            </figure>
+          </div>
+        </li>
+      </div>
+      <div class="">
+        <li>
+          <h3>SEO</h3>
+          <p>
+            We create a unique identity for your brand, helping to set you apart
+            from the competition.
+          </p>
+          <div class="tags">
+            <i>Blogs</i>
+            <i>E-commerce</i>
+            <i>Corporate site</i>
+          </div>
+          <div class="medias">
+            <figure>
+              <img src="/images/works-004.webp" alt="" />
+            </figure>
+            <figure>
+              <img src="/images/works-004-cover.webp" alt="" />
+            </figure>
+          </div>
+        </li>
+      </div>
     </ul>
   </section>
 </template>
@@ -106,21 +114,50 @@ onMounted(() => {
     .timeline({
       scrollTrigger: {
         trigger: ".services-stack",
-        start: "100% 100%",
-        end: `+=${innerWidth * 4}`,
+        start: "-20% 100%",
+        end: `100% 100%`,
         scrub: true,
-        pin: true,
       },
     })
-    .fromTo(
-      ".services-stack-list li",
+    .to(
+      ".services-stack-list > div",
       {
-        xPercent: 0,
-      },
-      {
-        xPercent: -300,
+        yPercent: 0,
+        stagger: 0.25,
+        duration: 0.5,
         ease: "none",
-      }
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      },
+      0
+    )
+    // .fromTo(
+    //   ".services-stack-list > div li",
+    //   {
+    //     scale: 0.6,
+    //     rotate: "5deg",
+    //     xPercent: -7.5,
+    //   },
+    //   {
+    //     stagger: 0.25,
+    //     duration: 0.5,
+    //     xPercent: 0,
+    //     ease: "none",
+    //     scale: 1,
+    //     rotate: "0deg",
+    //   },
+    //   "<"
+    // )
+    .to(
+      ".services-stack-list .notlast",
+      {
+        yPercent: -20,
+        stagger: 0.25,
+        duration: 0.25,
+        ease: "none",
+        clipPath: "polygon(0% 0%, 100% 0%, 88.5% 86%, 6% 85.5%)",
+        immediateRender: false,
+      },
+      0.5
     );
 });
 </script>

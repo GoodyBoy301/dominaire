@@ -8,9 +8,15 @@
 
   &-list {
     width: 100vw;
-    height: 100vh;
+    height: 400vh;
     display: flex;
+    flex-direction: column;
     @include media("<phone") {
+    }
+
+    & > div {
+      transform: translateY(50);
+      clip-path: polygon(11.7% 13.5%, 73% 27%, 100% 100%, 0% 100%);
     }
 
     li {
@@ -24,23 +30,23 @@
       }
     }
 
-    li:nth-of-type(1) {
+    & > div:nth-of-type(1) {
       background: var(--bg-color, #f5f1ee);
       h3,
       p {
         color: #000;
       }
     }
-    li:nth-of-type(2) {
+    & > div:nth-of-type(2) {
       background: #4c288d;
     }
-    li:nth-of-type(3) {
+    & > div:nth-of-type(3) {
       background: #e7fde7;
       * {
         color: #043840;
       }
     }
-    li:nth-of-type(4) {
+    & > div:nth-of-type(4) {
       background: #08627c;
     }
 
@@ -69,10 +75,15 @@
       line-height: 3.2rem;
       text-transform: uppercase;
       width: 52.5rem;
+      position: absolute;
+      bottom: 7.2rem;
+      left: 8.6rem;
+      z-index: 10;
       @include media("<phone") {
         width: 35rem;
         font-size: 1.6rem;
         line-height: 2.8rem;
+        position: static;
       }
     }
 
@@ -81,21 +92,14 @@
         width: 57rem;
         height: 40.9rem;
         position: absolute;
+        top: 8.3rem;
+        right: 8rem;
         @include media("<phone") {
           width: 36.1rem;
           height: 23.9rem;
           top: 30.8rem !important;
           left: 1.6rem !important;
         }
-      }
-
-      figure:nth-of-type(1) {
-        right: 0;
-        top: -10.9rem;
-      }
-      figure:nth-of-type(2) {
-        left: 0;
-        bottom: -18.4rem;
       }
     }
 
@@ -110,11 +114,11 @@
       display: flex;
       flex-direction: column-reverse;
       position: absolute;
-      right: 13.4rem;
-      bottom: 3.1rem;
-      top: 40vh;
-      gap: 4rem;
+      right: 8rem;
+      bottom: 7.2rem;
+      gap: 3.2rem;
       flex-wrap: wrap-reverse;
+      width: 57rem;
       @include media("<phone") {
         top: 56.7rem;
         bottom: 0rem;
@@ -127,7 +131,7 @@
       i {
         padding: 1rem;
         background: #fcff00;
-        width: fit-content;
+        width: 100%;
         margin-right: auto;
         @include media("<phone") {
           font-size: 1.6rem;

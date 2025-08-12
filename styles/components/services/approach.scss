@@ -1,51 +1,91 @@
 .services-approach {
-  /* padding: 8rem 8rem 6.8rem; */
-  background: #e7fde7;
-  position: relative;
-  overflow: hidden;
+  background: #f5f1ee;
+  padding: 10rem 0;
   @include media("<phone") {
-    padding: 8rem 1.6rem 8.1rem;
+    padding: 3.6rem 0 3.2rem;
   }
 
-  .tags {
-    position: absolute;
-    z-index: 2;
-    width: 250vw;
-    display: flex;
-    justify-content: space-between;
-    left: -10rem;
-    bottom: 2rem;
-    align-items: center;
+  &-heading {
+    padding: 0 8rem;
+    color: #000;
+    font-family: Humane;
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18rem;
+    text-transform: uppercase;
+    @include media("<phone") {
+      padding: 0 1.6rem;
+      font-size: 7.2rem;
+      line-height: 7.2rem;
+    }
+  }
 
-    h4 {
-      color: #000;
-      font-family: Humane;
-      font-size: 9rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 9rem;
-      text-transform: uppercase;
-      width: 34rem;
+  &-list {
+    margin-top: 4.7rem;
+    display: flex;
+    width: max-content;
+    @include media("<phone") {
+      margin-top: 4.9rem;
+      /* flex-direction: column; */
+      /* margin: 3.2rem 1.6rem 0; */
+      margin-top: 3.2rem;
+      /* border-top: 0.1rem solid rgba(0, 0, 0, 0.32); */
+    }
+
+    li:first-of-type {
+      margin-left: 8rem;
       @include media("<phone") {
-        font-size: 7.2rem;
-        line-height: 7.2rem;
+        margin-left: 1.6rem;
+      }
+    }
+    li:last-of-type {
+      padding-right: 0rem;
+      margin-right: 8rem;
+      @include media("<phone") {
+        margin-right: 1.6rem;
       }
     }
 
-    h5 {
-      color: #000;
-      font-family: Humane;
-      font-size: 9rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 9rem;
-      text-transform: uppercase;
-      width: 16.2rem;
+    li {
+      flex: 1;
+      width: 67.3rem;
+      flex-shrink: 0;
+      padding-right: 16.5rem;
+      padding-top: 4.7rem;
+      @include media("<phone") {
+        width: 35rem;
+        padding-right: 4.8rem;
+      }
     }
 
-    hr {
-      flex: 1;
-      margin-inline: 5rem;
+    h4 {
+      color: #000;
+      font-family: Nohemi;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 5rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #000;
+      font-family: Humane;
+      font-size: 10rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 10rem;
+      text-transform: uppercase;
+      margin-top: 1.4rem;
+      @include media("<phone") {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
+      @include media("<phone") {
+        font-size: 8rem;
+        line-height: 8rem;
+      }
     }
 
     p {
@@ -54,97 +94,40 @@
       font-size: 2.4rem;
       font-style: normal;
       font-weight: 400;
-      line-height: 2.8rem;
+      line-height: 3.2rem;
       text-transform: uppercase;
-      width: 34rem;
+      margin-top: 3.2rem;
+      @include media("<phone") {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
     }
   }
 
-  &-list {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+  &-track {
+    width: 121.2rem;
+    height: 0.1rem;
+    background: rgba(0, 0, 0, 0.32);
+    position: absolute;
+    bottom: 48rem;
+    left: 8rem;
     @include media("<phone") {
+      /* display: none; */
+      bottom: 40rem;
+      width: 36.1rem;
+      left: 1.6rem;
     }
+  }
 
-    li {
-      flex-shrink: 0;
-      width: 100vw;
-      height: 100vh;
-      padding: 9.9rem 8.6rem;
-      position: relative;
-      @include media("<phone") {
-        padding: 0;
-      }
-    }
-
-    h3 {
-      color: #000;
-      font-family: Humane;
-      font-size: 20rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 18rem;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
-      @include media("<phone") {
-        font-size: 7.2rem;
-        line-height: 7.2rem;
-      }
-    }
-
-    p {
-      color: #000;
-      font-family: Nohemi;
-      font-size: 2.8rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 3.2rem;
-      text-transform: uppercase;
-      width: 52.5rem;
-    }
-
-    .medias {
-      figure {
-        width: 57rem;
-        height: 40.9rem;
-        position: absolute;
-      }
-
-      figure:nth-of-type(1) {
-        right: 0;
-        top: -10.9rem;
-      }
-      figure:nth-of-type(2) {
-        left: 0;
-        bottom: -18.4rem;
-      }
-    }
-
-    .tags {
-      color: #000;
-      font-family: Nohemi;
-      font-size: 3.2rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 3.2rem;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column-reverse;
-      position: absolute;
-      right: 13.4rem;
-      bottom: 3.1rem;
-      top: 40vh;
-      gap: 4rem;
-      flex-wrap: wrap-reverse;
-
-      i {
-        padding: 1rem;
-        background: #fcff00;
-        width: fit-content;
-        margin-right: auto;
-      }
+  &-tracker {
+    width: 37.3rem;
+    height: 0.1rem;
+    background: #000;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    @include media("<phone") {
+      width: 12rem;
     }
   }
 }

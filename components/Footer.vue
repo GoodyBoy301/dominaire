@@ -52,6 +52,17 @@
       <div class="footer-footer-links">
         <NuxtLink
           href="/"
+          @mousemove="(e:MouseEvent) => MouseMove(e, 11)"
+          @mouseleave="(e:MouseEvent) => MouseLeave(11)"
+          :style="{
+            '--x': x11,
+            '--y': y11,
+          }"
+        >
+          <p>Home</p>
+        </NuxtLink>
+        <NuxtLink
+          href="/"
           target="_blank"
           @mousemove="(e:MouseEvent) => MouseMove(e, 1)"
           @mouseleave="(e:MouseEvent) => MouseLeave(1)"
@@ -61,6 +72,17 @@
           }"
         >
           <p>x(twitter)</p>
+        </NuxtLink>
+        <NuxtLink
+          href="/projects"
+          @mousemove="(e:MouseEvent) => MouseMove(e, 22)"
+          @mouseleave="(e:MouseEvent) => MouseLeave(22)"
+          :style="{
+            '--x': x22,
+            '--y': y22,
+          }"
+        >
+          <p href="/" target="_blank">Projects</p>
         </NuxtLink>
         <NuxtLink
           href="/"
@@ -75,6 +97,17 @@
           <p href="/" target="_blank">dribbble</p>
         </NuxtLink>
         <NuxtLink
+          href="/about"
+          @mousemove="(e:MouseEvent) => MouseMove(e, 33)"
+          @mouseleave="(e:MouseEvent) => MouseLeave(33)"
+          :style="{
+            '--x': x33,
+            '--y': y33,
+          }"
+        >
+          <p href="/" target="_blank">about us</p>
+        </NuxtLink>
+        <NuxtLink
           href="/"
           target="_blank"
           @mousemove="(e:MouseEvent) => MouseMove(e, 3)"
@@ -87,6 +120,17 @@
           <p href="/" target="_blank">awwwards</p>
         </NuxtLink>
         <NuxtLink
+          href="/services"
+          @mousemove="(e:MouseEvent) => MouseMove(e, 44)"
+          @mouseleave="(e:MouseEvent) => MouseLeave(44)"
+          :style="{
+            '--x': x44,
+            '--y': y44,
+          }"
+        >
+          <p href="/" target="_blank">Services</p>
+        </NuxtLink>
+        <NuxtLink
           href="/"
           target="_blank"
           @mousemove="(e:MouseEvent) => MouseMove(e, 4)"
@@ -97,6 +141,17 @@
           }"
         >
           <p href="/" target="_blank">linkedin</p>
+        </NuxtLink>
+        <NuxtLink
+          href="/contact"
+          @mousemove="(e:MouseEvent) => MouseMove(e, 55)"
+          @mouseleave="(e:MouseEvent) => MouseLeave(55)"
+          :style="{
+            '--x': x55,
+            '--y': y55,
+          }"
+        >
+          <p href="/" target="_blank">Contact</p>
         </NuxtLink>
         <NuxtLink
           href="/"
@@ -134,21 +189,41 @@ const x2 = ref(0);
 const x3 = ref(0);
 const x4 = ref(0);
 const x5 = ref(0);
+const x11 = ref(0);
+const x22 = ref(0);
+const x33 = ref(0);
+const x44 = ref(0);
+const x55 = ref(0);
 const y1 = ref(0);
 const y2 = ref(0);
 const y3 = ref(0);
 const y4 = ref(0);
 const y5 = ref(0);
+const y11 = ref(0);
+const y22 = ref(0);
+const y33 = ref(0);
+const y44 = ref(0);
+const y55 = ref(0);
 const w1 = ref(1);
 const w2 = ref(1);
 const w3 = ref(1);
 const w4 = ref(1);
 const w5 = ref(1);
+const w11 = ref(1);
+const w22 = ref(1);
+const w33 = ref(1);
+const w44 = ref(1);
+const w55 = ref(1);
 const h1 = ref(1);
 const h2 = ref(1);
 const h3 = ref(1);
 const h4 = ref(1);
 const h5 = ref(1);
+const h11 = ref(1);
+const h22 = ref(1);
+const h33 = ref(1);
+const h44 = ref(1);
+const h55 = ref(1);
 
 const router = useRouter();
 
@@ -157,21 +232,41 @@ function MouseMove(e: MouseEvent, index: number) {
     x1.value = e.offsetX / w1.value - 0.5;
     y1.value = e.offsetY / h1.value - 0.5;
   }
+  if (index === 11) {
+    x11.value = e.offsetX / w11.value - 0.5;
+    y11.value = e.offsetY / h11.value - 0.5;
+  }
   if (index === 2) {
     x2.value = e.offsetX / w2.value - 0.5;
     y2.value = e.offsetY / h2.value - 0.5;
+  }
+  if (index === 22) {
+    x22.value = e.offsetX / w22.value - 0.5;
+    y22.value = e.offsetY / h22.value - 0.5;
   }
   if (index === 3) {
     x3.value = e.offsetX / w3.value - 0.5;
     y3.value = e.offsetY / h3.value - 0.5;
   }
+  if (index === 33) {
+    x33.value = e.offsetX / w33.value - 0.5;
+    y33.value = e.offsetY / h33.value - 0.5;
+  }
   if (index === 4) {
     x4.value = e.offsetX / w4.value - 0.5;
     y4.value = e.offsetY / h4.value - 0.5;
   }
+  if (index === 44) {
+    x44.value = e.offsetX / w44.value - 0.5;
+    y44.value = e.offsetY / h44.value - 0.5;
+  }
   if (index === 5) {
     x5.value = e.offsetX / w5.value - 0.5;
     y5.value = e.offsetY / h5.value - 0.5;
+  }
+  if (index === 55) {
+    x55.value = e.offsetX / w55.value - 0.5;
+    y55.value = e.offsetY / h55.value - 0.5;
   }
 }
 
@@ -180,43 +275,83 @@ function MouseLeave(index: number) {
     x1.value = 0;
     y1.value = 0;
   }
+  if (index === 11) {
+    x11.value = 0;
+    y11.value = 0;
+  }
   if (index === 2) {
     x2.value = 0;
     y2.value = 0;
+  }
+  if (index === 22) {
+    x22.value = 0;
+    y22.value = 0;
   }
   if (index === 3) {
     x3.value = 0;
     y3.value = 0;
   }
+  if (index === 33) {
+    x33.value = 0;
+    y33.value = 0;
+  }
   if (index === 4) {
     x4.value = 0;
     y4.value = 0;
   }
+  if (index === 44) {
+    x44.value = 0;
+    y44.value = 0;
+  }
   if (index === 5) {
     x5.value = 0;
     y5.value = 0;
+  }
+  if (index === 55) {
+    x55.value = 0;
+    y55.value = 0;
   }
 }
 
 onMounted(() => {
   document.querySelectorAll(".footer-footer-links p").forEach((el, i) => {
     if (i === 0) {
+      w11.value = el.getBoundingClientRect().width;
+      h11.value = el.getBoundingClientRect().height;
+    }
+    if (i === 1) {
       w1.value = el.getBoundingClientRect().width;
       h1.value = el.getBoundingClientRect().height;
     }
-    if (i === 1) {
+    if (i === 2) {
+      w22.value = el.getBoundingClientRect().width;
+      h22.value = el.getBoundingClientRect().height;
+    }
+    if (i === 3) {
       w2.value = el.getBoundingClientRect().width;
       h2.value = el.getBoundingClientRect().height;
     }
-    if (i === 2) {
+    if (i === 4) {
+      w33.value = el.getBoundingClientRect().width;
+      h33.value = el.getBoundingClientRect().height;
+    }
+    if (i === 5) {
       w3.value = el.getBoundingClientRect().width;
       h3.value = el.getBoundingClientRect().height;
     }
-    if (i === 3) {
+    if (i === 6) {
+      w44.value = el.getBoundingClientRect().width;
+      h44.value = el.getBoundingClientRect().height;
+    }
+    if (i === 7) {
       w4.value = el.getBoundingClientRect().width;
       h4.value = el.getBoundingClientRect().height;
     }
-    if (i === 4) {
+    if (i === 8) {
+      w55.value = el.getBoundingClientRect().width;
+      h55.value = el.getBoundingClientRect().height;
+    }
+    if (i === 9) {
       w5.value = el.getBoundingClientRect().width;
       h5.value = el.getBoundingClientRect().height;
     }

@@ -137,12 +137,12 @@
     }
 
     &-links {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.2rem;
       color: var(--bg-color, #f5f1ee);
       font-family: Nohemi;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-style: normal;
       font-weight: 500;
       line-height: 2.8rem;

@@ -10,16 +10,18 @@
     display: flex;
     gap: 40.5rem;
     align-items: center;
-    padding: 0 8rem 10.3rem;
+    padding: 10rem 8rem 23rem;
+    height: calc(100vh - 16.8rem);
     @include media("<phone") {
       padding: 0rem 1.6rem 8.2rem;
       flex-direction: column;
       gap: 10rem;
       align-items: unset;
+      height: auto;
     }
 
     h1 {
-      color: var(--Primary-Red, #e7204f);
+      color: #f5f1ee;
       font-family: Humane;
       font-size: 25rem;
       font-style: normal;
@@ -46,7 +48,7 @@
       @include media("<phone") {
         font-size: 1.6rem;
         line-height: 3.2rem;
-        padding: 0c;
+        padding: 0rem;
       }
     }
   }
