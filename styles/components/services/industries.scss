@@ -1,0 +1,92 @@
+.services-industries {
+  background: #000000;
+  padding: 15.6rem 9rem;
+  margin: -0.1rem 0;
+  gap: 2.8rem;
+  position: relative;
+  @include media("<phone") {
+    padding: 8rem 0.6rem;
+    flex-direction: column;
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    @include media("<phone") {
+      padding: 0 1.6rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    h2 {
+      color: #ffffff;
+      font-family: Humane;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18rem;
+      text-transform: uppercase;
+      @include media("<phone") {
+        font-size: 10rem;
+        line-height: 10rem;
+      }
+    }
+    p {
+      width: 57.7rem;
+      color: #ffffff;
+      font-family: Nohemi;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      max-width: 57.7rem;
+      margin-bottom: 1.6rem;
+      @include media("<phone") {
+        font-size: 1.55rem;
+        line-height: 2.8rem;
+        width: 36.1rem;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Humane;
+    font-size: 10rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 10rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 16rem;
+    gap: 3.2rem;
+    @include media("<phone") {
+      flex-direction: column;
+      margin: 2rem 1.6rem;
+    }
+
+    hr {
+      flex: 1;
+      height: 0.1rem;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      @include media("<phone") {
+        display: none;
+      }
+    }
+  }
+}
