@@ -13,16 +13,16 @@
       <NuxtLink href="/">
         <span> Home </span>
       </NuxtLink>
+      <NuxtLink href="/projects">
+        <aside />
+        <span> Projects </span>
+      </NuxtLink>
       <NuxtLink href="/services">
         <aside />
         <span> Services </span>
       </NuxtLink>
       <NuxtLink href="/about">
         <span> About Us </span>
-      </NuxtLink>
-      <NuxtLink href="/projects">
-        <aside />
-        <span> Projects </span>
       </NuxtLink>
       <NuxtLink href="/contact" data-mobile>
         <aside />
