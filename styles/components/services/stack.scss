@@ -36,6 +36,10 @@
       p {
         color: #000;
       }
+      i {
+        background: #000;
+        color: #f5f1ee;
+      }
     }
     & > div:nth-of-type(2) {
       background: #4c288d;
@@ -44,6 +48,10 @@
       background: #e7fde7;
       * {
         color: #043840;
+      }
+      i {
+        background: #000;
+        color: #f5f1ee;
       }
     }
     & > div:nth-of-type(4) {
@@ -130,7 +138,7 @@
 
       i {
         padding: 1rem;
-        background: #fcff00;
+        background: #f5f1ee;
         width: 100%;
         margin-right: auto;
         @include media("<phone") {
