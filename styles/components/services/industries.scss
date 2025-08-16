@@ -4,6 +4,8 @@
   margin: -0.1rem 0;
   gap: 2.8rem;
   position: relative;
+  width: 100vw;
+  overflow: hidden;
   @include media("<phone") {
     padding: 8rem 0.6rem;
     flex-direction: column;
@@ -74,9 +76,21 @@
     position: relative;
     margin-top: 16rem;
     gap: 3.2rem;
+    width: max-content;
+    animation: industries 10s linear infinite;
     @include media("<phone") {
       flex-direction: column;
       margin: 2rem 1.6rem;
+      animation: unset;
+    }
+
+    @keyframes industries {
+      0% {
+        transform: translateX(0rem);
+      }
+      100% {
+        transform: translateX(-155.5rem);
+      }
     }
 
     hr {
@@ -84,6 +98,7 @@
       height: 0.1rem;
       background: rgba(255, 255, 255, 0.5);
       border: none;
+      width: 17.7rem;
       @include media("<phone") {
         display: none;
       }

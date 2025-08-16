@@ -18,6 +18,14 @@
       <li>real estate</li>
       <hr />
       <li>healthcare</li>
+      <hr data-desktop />
+      <li data-desktop>fintech</li>
+      <hr data-desktop />
+      <li data-desktop>edtech</li>
+      <hr data-desktop />
+      <li data-desktop>real estate</li>
+      <hr data-desktop />
+      <li data-desktop>healthcare</li>
     </ul>
   </section>
 </template>
