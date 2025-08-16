@@ -2,7 +2,7 @@
   background-color: #000000;
   padding: 10rem 0;
   @include media("<phone") {
-    padding: 3.6rem 0 3.2rem;
+    padding: 12rem 0 0rem;
   }
 
   &-heading {
@@ -16,6 +16,8 @@
     text-transform: uppercase;
     @include media("<phone") {
       padding: 0 1.6rem;
+      font-size: 10rem;
+      line-height: 10rem;
     }
   }
 
@@ -106,6 +108,11 @@
     position: absolute;
     top: 32.8rem;
     left: 8rem;
+    @include media("<phone") {
+      top: 26rem;
+      width: 36.1rem;
+      left: 1.6rem;
+    }
   }
 
   &-tracker {
@@ -115,5 +122,8 @@
     position: absolute;
     top: 0rem;
     left: 0rem;
+    @include media("<phone") {
+      width: 12rem;
+    }
   }
 }

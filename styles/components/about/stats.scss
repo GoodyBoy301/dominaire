@@ -1,7 +1,7 @@
 .about-stats {
   padding: 16rem 8rem 3.3rem;
   @include media("<phone") {
-    padding: 8rem 1.6rem 8.1rem;
+    padding: 8rem 1.6rem 4rem;
   }
 
   &-heading {
@@ -19,6 +19,8 @@
     @include media("<phone") {
       font-size: 1.6rem;
       line-height: 3.2rem;
+      width: 36.1rem;
+      padding-bottom: 0rem;
     }
   }
 
@@ -29,6 +31,10 @@
     display: flex;
     gap: 1.5rem;
     @include media("<phone") {
+      flex-direction: column;
+      width: 36.1rem;
+      margin-top: 8rem;
+      height: max-content;
     }
 
     li {
@@ -40,6 +46,10 @@
       gap: 10rem;
       justify-content: space-between;
       flex-shrink: 0;
+      @include media("<phone") {
+        height: 4.8rem;
+        width: 36.1rem;
+      }
     }
 
     li:nth-of-type(1) {
@@ -66,6 +76,10 @@
       font-weight: 400;
       line-height: 3.2rem;
       text-transform: uppercase;
+      @include media("<phone") {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
     }
   }
 }

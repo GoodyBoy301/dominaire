@@ -112,7 +112,6 @@
     bottom: 48rem;
     left: 8rem;
     @include media("<phone") {
-      /* display: none; */
       bottom: 40rem;
       width: 36.1rem;
       left: 1.6rem;

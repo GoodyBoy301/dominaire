@@ -53,26 +53,26 @@ onMounted(() => {
         }
       );
   } else {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".about-stats",
-          start: "100% 100%",
-          end: `+=${innerWidth * 3}`,
-          scrub: true,
-          pin: true,
-        },
-      })
-      .fromTo(
-        ".about-stats-list li",
-        {
-          x: "0",
-        },
-        {
-          x: "-95rem",
-          ease: "none",
-        }
-      );
+    // gsap
+    //   .timeline({
+    //     scrollTrigger: {
+    //       trigger: ".about-stats",
+    //       start: "100% 100%",
+    //       end: `+=${innerWidth * 3}`,
+    //       scrub: true,
+    //       pin: true,
+    //     },
+    //   })
+    //   .fromTo(
+    //     ".about-stats-list li",
+    //     {
+    //       x: "0",
+    //     },
+    //     {
+    //       x: "-95rem",
+    //       ease: "none",
+    //     }
+    //   );
   }
 
   new SplitText(".about-stats-heading", {

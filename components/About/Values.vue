@@ -82,7 +82,8 @@ onMounted(() => {
         x: "0",
       },
       {
-        x: "83.7rem",
+        x: innerWidth < 768 ? "24rem" : "83.7rem",
+        // x: "83.7rem",
         ease: "none",
       },
       0

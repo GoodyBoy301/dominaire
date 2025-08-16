@@ -17,8 +17,9 @@
     @include media("<phone") {
       padding: 0rem 1.6rem 8.2rem;
       flex-direction: column;
-      gap: 10rem;
+      gap: 12rem;
       align-items: unset;
+      height: auto;
     }
 
     h1 {
@@ -50,7 +51,8 @@
       @include media("<phone") {
         font-size: 1.6rem;
         line-height: 3.2rem;
-        padding: 0c;
+        padding: 0;
+        width: 36.1rem;
       }
     }
   }
