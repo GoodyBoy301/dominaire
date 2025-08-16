@@ -140,7 +140,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.2rem;
-      color: var(--bg-color, #f5f1ee);
+      color: var(--bg-color, #f5f1ee88);
       font-family: Nohemi;
       font-size: 1.6rem;
       font-style: normal;
@@ -156,6 +156,10 @@
         @include media("<phone") {
           padding: unset;
         }
+      }
+      a:hover {
+        color: var(--bg-color, #f5f1ee);
+        transition: color 0.15s ease;
       }
       p {
         display: block;
